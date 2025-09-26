@@ -3,10 +3,11 @@
 Selamat datang di kumpulan dokumentasi belajar saya.  
 Pilih topik di bawah ini:
 
-```{toctree}```
+```{toctree}
 :maxdepth: 2
 
 tmux
 Website_Sphinx
 python
 federated_learning
+```
