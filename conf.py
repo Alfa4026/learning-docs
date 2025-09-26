@@ -26,3 +26,12 @@ language = 'id'
 
 html_theme = 'furo'
 html_static_path = ['_static']
+
+# Ini penting biar Sphinx tahu .md juga dipakai
+source_suffix = {
+    '.rst': 'restructuredtext',
+    '.md': 'markdown',
+}
+
+# File utama yang dibaca
+master_doc = 'index'
