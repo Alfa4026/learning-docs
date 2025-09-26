@@ -5,6 +5,7 @@ Pilih topik di bawah ini:
 
 .. toctree::
    :maxdepth: 2
+   :caption: 📖 Daftar Materi
 
    tmux
    Website_Sphinx
