@@ -7,7 +7,7 @@
 Bayangkan kamu sedang menilai rumah:
 
 $$
-\text{harga\_rumah} = (\text{luas\_tanah} \times 2{,}000{,}000) + (\text{jumlah\_kamar} \times 10{,}000{,}000) + (\text{garasi} \times 5{,}000{,}000)
+\text{harga rumah} = (\text{luas tanah} \times 2{,}000{,}000) + (\text{jumlah kamar} \times 10{,}000{,}000) + (\text{garasi} \times 5{,}000{,}000)
 $$
 
 Angka **2 juta**, **10 juta**, dan **5 juta** itulah **bobot**.
@@ -27,7 +27,7 @@ Dalam jaringan saraf (neural network):
 Contoh sederhana:
 
 $$
-\text{harga\_rumah} = (\text{luas\_tanah} \times 2{,}000{,}000) + (\text{jumlah\_kamar} \times 10{,}000{,}000) + 20{,}000{,}000
+\text{harga rumah} = (\text{luas tanah} \times 2{,}000{,}000) + (\text{jumlah kamar} \times 10{,}000{,}000) + 20{,}000{,}000
 $$
 
 Nilai 20 juta itu tidak tergantung pada input apa pun, tapi membantu model menyesuaikan hasil prediksi agar lebih fleksibel — seperti “titik awal” atau **offset**.
