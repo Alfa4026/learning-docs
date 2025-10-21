@@ -17,6 +17,22 @@ release = '1.0'
 extensions = ["myst_parser",
              "sphinx.ext.mathjax",]
 
+myst_enable_extensions = [
+    "amsmath",
+    "dollarmath",           # ← wajib supaya $...$ dan $$...$$ bisa dibaca
+]
+
+# Tambahkan jalur MathJax agar bisa dipanggil di GitHub Pages
+mathjax_path = "https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+
+# Konfigurasi tambahan (aman untuk semua tema)
+mathjax3_config = {
+    "tex": {
+        "inlineMath": [["$", "$"], ["\\(", "\\)"]],
+        "displayMath": [["$$", "$$"], ["\\[", "\\]"]],
+    },
+}
+
 source_suffix = {
     '.rst': 'restructuredtext',
     '.md': 'markdown',
