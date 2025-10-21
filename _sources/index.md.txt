@@ -9,5 +9,3 @@ Pilih topik di bawah ini:
 
 tmux
 Website_Sphinx
-python
-federated_learning
