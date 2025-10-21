@@ -37,9 +37,9 @@ Tanpa bias, semua garis regresi akan melewati titik (0,0), padahal dunia nyata j
 > **Gradien adalah arah dan seberapa besar perubahan yang harus dilakukan terhadap bobot dan bias agar model makin akurat.**
 
 Secara matematis, gradien adalah **turunan (derivative)** dari fungsi loss terhadap bobot:
-[
+$$
 \nabla W = \frac{\partial \text{Loss}}{\partial W}
-]
+$$
 
 Tapi dalam bahasa sehari-hari:
 
@@ -66,9 +66,9 @@ Analogi:
 > * Langkah besar = cepat tapi bisa terpeleset.
 
 Dalam formula update bobot:
-[
+$$
 W_{baru} = W_{lama} - \alpha \times \nabla W
-]
+$$
 
 ---
 
@@ -106,9 +106,9 @@ Langkah-langkah:
 2. Hitung **loss** antara prediksi dan label asli.
 3. Lakukan **backward pass** (turunan berantai) untuk menghitung gradien tiap bobot.
 4. Update bobot:
-   [
+   $$
    W = W - \alpha \times \text{gradien}
-   ]
+   $$
 
 Proses ini diulang ribuan kali.
 
@@ -141,9 +141,9 @@ Alih-alih hanya melihat gradien terbaru, momentum juga melihat arah sebelumnya.
 Ibarat bola yang meluncur di bukit, momentum membuatnya tetap bergerak walau gradien sesaat mendatar.
 
 Formula umumnya:
-[
+$$
 v = \beta v + (1 - \beta)\nabla W, \quad W = W - \alpha v
-]
+$$
 
 ---
 
@@ -158,9 +158,9 @@ Misal ada 3 klien:
 * Klien 3 punya 50 data → model C
 
 Server menggabungkannya:
-[
+$$
 W_{global} = \frac{100W_A + 200W_B + 50W_C}{100 + 200 + 50}
-]
+$$
 
 Jadi kontribusi tiap klien sebanding dengan jumlah datanya.
 
