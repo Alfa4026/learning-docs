@@ -6,7 +6,7 @@
 <link rel="index" title="Indeks" href="genindex.html"><link rel="search" title="Pencarian" href="search.html"><link rel="prev" title="📘 Dokumentasi: Membuat Website Dokumentasi Belajar dengan Sphinx + GitHub Pages (Auto Deploy)" href="Website_Sphinx.html">
 
     <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
-        <title>🧠 1. Bobot (Weight) - Dokumentasi Belajar 1.0</title>
+        <title>📘 Dokumentasi beberapa istilah dalam machine learning - Dokumentasi Belajar 1.0</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
@@ -172,7 +172,7 @@
           <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
         </button>
       </div>
-      <label class="toc-overlay-icon toc-header-icon no-toc" for="__toc">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
         <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
       </label>
     </div>
@@ -194,17 +194,7 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="tmux.html">📘 Dokumentasi Penggunaan <code class="docutils literal notranslate"><span class="pre">tmux</span></code> di Ubuntu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Website_Sphinx.html">📘 Dokumentasi: Membuat Website Dokumentasi Belajar dengan Sphinx + GitHub Pages (Auto Deploy)</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">🧠 1. <strong>Bobot (Weight)</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#bias">⚖️ 2. <strong>Bias</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#gradien">🧩 3. <strong>Gradien</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#learning-rate">🚶 4. <strong>Learning Rate (α)</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#epoch-dan-batch">🔁 5. <strong>Epoch dan Batch</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#loss-function">🧮 6. <strong>Loss Function</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#backpropagation">⚙️ 7. <strong>Backpropagation</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#federated-learning-fl">🌍 8. <strong>Federated Learning (FL)</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#momentum">⚡ 9. <strong>Momentum</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#fedavg-federated-averaging">🧭 10. <strong>FedAvg (Federated Averaging)</strong></a></li>
-<li class="toctree-l1"><a class="reference internal" href="#ringkasan-cepat">🔍 Ringkasan Cepat</a></li>
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">📘 Dokumentasi beberapa istilah dalam machine learning</a></li>
 </ul>
 
 </div>
@@ -238,13 +228,15 @@
               <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
             </button>
           </div>
-          <label class="toc-overlay-icon toc-content-icon no-toc" for="__toc">
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
             <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
           </label>
         </div>
         <article role="main" id="furo-main-content">
-          <section id="bobot-weight">
-<h1>🧠 1. <strong>Bobot (Weight)</strong><a class="headerlink" href="#bobot-weight" title="Link to this heading">¶</a></h1>
+          <section id="dokumentasi-beberapa-istilah-dalam-machine-learning">
+<h1>📘 Dokumentasi beberapa istilah dalam machine learning<a class="headerlink" href="#dokumentasi-beberapa-istilah-dalam-machine-learning" title="Link to this heading">¶</a></h1>
+<section id="bobot-weight">
+<h2>🧠 1. <strong>Bobot (Weight)</strong><a class="headerlink" href="#bobot-weight" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><strong>Bobot adalah nilai yang mengatur seberapa kuat pengaruh suatu fitur/input terhadap output model.</strong></p>
 </div></blockquote>
@@ -259,10 +251,10 @@
 <li><p>Bobot bisa <strong>positif (meningkatkan aktivasi)</strong> atau <strong>negatif (mengurangi aktivasi)</strong>.</p></li>
 <li><p>Saat model belajar, bobot <strong>diubah-ubah sedikit demi sedikit</strong> agar hasil prediksi makin mendekati kebenaran.</p></li>
 </ul>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="bias">
-<h1>⚖️ 2. <strong>Bias</strong><a class="headerlink" href="#bias" title="Link to this heading">¶</a></h1>
+<h2>⚖️ 2. <strong>Bias</strong><a class="headerlink" href="#bias" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><strong>Bias adalah nilai tambahan yang “menggeser” hasil sebelum masuk ke fungsi aktivasi.</strong></p>
 </div></blockquote>
@@ -272,10 +264,10 @@
 </div></blockquote>
 <p>Nilai 20 juta itu tidak tergantung pada input apa pun, tapi membantu model menyesuaikan hasil prediksi agar lebih fleksibel — seperti “titik awal” atau <strong>offset</strong>.</p>
 <p>Tanpa bias, semua garis regresi akan melewati titik (0,0), padahal dunia nyata jarang begitu.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="gradien">
-<h1>🧩 3. <strong>Gradien</strong><a class="headerlink" href="#gradien" title="Link to this heading">¶</a></h1>
+<h2>🧩 3. <strong>Gradien</strong><a class="headerlink" href="#gradien" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><strong>Gradien adalah arah dan seberapa besar perubahan yang harus dilakukan terhadap bobot dan bias agar model makin akurat.</strong></p>
 </div></blockquote>
@@ -290,10 +282,10 @@
 <p>Bayangkan kamu berdiri di puncak bukit (tempat kesalahan model masih tinggi).
 Gradien memberi tahu kamu <strong>ke arah mana harus melangkah</strong> agar kamu menuruni bukit (mengurangi error).
 Jika kamu melangkah terlalu besar, kamu bisa “loncat ke lembah lain” — di situlah <strong>learning rate</strong> berperan.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="learning-rate">
-<h1>🚶 4. <strong>Learning Rate (α)</strong><a class="headerlink" href="#learning-rate" title="Link to this heading">¶</a></h1>
+<h2>🚶 4. <strong>Learning Rate (α)</strong><a class="headerlink" href="#learning-rate" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><strong>Learning rate adalah ukuran langkah yang diambil model setiap kali memperbarui bobot berdasarkan gradien.</strong></p>
 </div></blockquote>
@@ -313,20 +305,20 @@ Jika kamu melangkah terlalu besar, kamu bisa “loncat ke lembah lain” — di 
 [
 W_{baru} = W_{lama} - \alpha \times \nabla W
 ]</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="epoch-dan-batch">
-<h1>🔁 5. <strong>Epoch dan Batch</strong><a class="headerlink" href="#epoch-dan-batch" title="Link to this heading">¶</a></h1>
+<h2>🔁 5. <strong>Epoch dan Batch</strong><a class="headerlink" href="#epoch-dan-batch" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><strong>Epoch:</strong> satu kali seluruh dataset digunakan untuk melatih model.</p></li>
 <li><p><strong>Batch:</strong> potongan kecil dari dataset yang digunakan sekali update.</p></li>
 <li><p><strong>Mini-batch:</strong> sebagian kecil data yang membuat pembelajaran lebih efisien.</p></li>
 </ul>
 <p>Misal dataset = 1000 gambar, batch = 100 → 1 epoch = 10 batch.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="loss-function">
-<h1>🧮 6. <strong>Loss Function</strong><a class="headerlink" href="#loss-function" title="Link to this heading">¶</a></h1>
+<h2>🧮 6. <strong>Loss Function</strong><a class="headerlink" href="#loss-function" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><strong>Fungsi yang mengukur seberapa jauh prediksi model dari kenyataan.</strong></p>
 </div></blockquote>
@@ -337,10 +329,10 @@ W_{baru} = W_{lama} - \alpha \times \nabla W
 </ul>
 <p>Loss inilah “bukit” yang coba diturunkan oleh gradien.
 Semakin kecil loss, semakin baik modelmu memprediksi.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="backpropagation">
-<h1>⚙️ 7. <strong>Backpropagation</strong><a class="headerlink" href="#backpropagation" title="Link to this heading">¶</a></h1>
+<h2>⚙️ 7. <strong>Backpropagation</strong><a class="headerlink" href="#backpropagation" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><strong>Proses menghitung gradien dan memperbarui bobot secara mundur dari output ke input.</strong></p>
 </div></blockquote>
@@ -355,10 +347,10 @@ W = W - \alpha \times \text{gradien}
 ]</p></li>
 </ol>
 <p>Proses ini diulang ribuan kali.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="federated-learning-fl">
-<h1>🌍 8. <strong>Federated Learning (FL)</strong><a class="headerlink" href="#federated-learning-fl" title="Link to this heading">¶</a></h1>
+<h2>🌍 8. <strong>Federated Learning (FL)</strong><a class="headerlink" href="#federated-learning-fl" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><strong>Cara melatih model tanpa memindahkan data mentah dari perangkat lokal.</strong></p>
 </div></blockquote>
@@ -375,10 +367,10 @@ W = W - \alpha \times \text{gradien}
 <li><p>Data pengguna tetap di perangkat mereka (privasi terjaga).</p></li>
 <li><p>Hanya bobot atau gradien yang “keliling dunia”.</p></li>
 </ul>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="momentum">
-<h1>⚡ 9. <strong>Momentum</strong><a class="headerlink" href="#momentum" title="Link to this heading">¶</a></h1>
+<h2>⚡ 9. <strong>Momentum</strong><a class="headerlink" href="#momentum" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><strong>Trik untuk mempercepat konvergensi dan menghindari tersesat di lembah kecil.</strong></p>
 </div></blockquote>
@@ -388,10 +380,10 @@ Ibarat bola yang meluncur di bukit, momentum membuatnya tetap bergerak walau gra
 [
 v = \beta v + (1 - \beta)\nabla W, \quad W = W - \alpha v
 ]</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="fedavg-federated-averaging">
-<h1>🧭 10. <strong>FedAvg (Federated Averaging)</strong><a class="headerlink" href="#fedavg-federated-averaging" title="Link to this heading">¶</a></h1>
+<h2>🧭 10. <strong>FedAvg (Federated Averaging)</strong><a class="headerlink" href="#fedavg-federated-averaging" title="Link to this heading">¶</a></h2>
 <blockquote>
 <div><p><strong>Strategi inti dalam federated learning yang menggabungkan bobot dari berbagai klien dengan cara dirata-rata.</strong></p>
 </div></blockquote>
@@ -406,10 +398,10 @@ v = \beta v + (1 - \beta)\nabla W, \quad W = W - \alpha v
 W_{global} = \frac{100W_A + 200W_B + 50W_C}{100 + 200 + 50}
 ]</p>
 <p>Jadi kontribusi tiap klien sebanding dengan jumlah datanya.</p>
-<hr class="docutils" />
 </section>
+<hr class="docutils" />
 <section id="ringkasan-cepat">
-<h1>🔍 Ringkasan Cepat<a class="headerlink" href="#ringkasan-cepat" title="Link to this heading">¶</a></h1>
+<h2>🔍 Ringkasan Cepat<a class="headerlink" href="#ringkasan-cepat" title="Link to this heading">¶</a></h2>
 <div class="table-wrapper colwidths-auto docutils container">
 <table class="docutils align-default">
 <thead>
@@ -463,6 +455,7 @@ W_{global} = \frac{100W_A + 200W_B + 50W_C}{100 + 200 + 50}
 </table>
 </div>
 </section>
+</section>
 
         </article>
       </div>
@@ -499,8 +492,37 @@ W_{global} = \frac{100W_A + 200W_B + 50W_C}{100 + 200 + 50}
         
       </footer>
     </div>
-    <aside class="toc-drawer no-toc">
+    <aside class="toc-drawer">
       
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">📘 Dokumentasi beberapa istilah dalam machine learning</a><ul>
+<li><a class="reference internal" href="#bobot-weight">🧠 1. <strong>Bobot (Weight)</strong></a></li>
+<li><a class="reference internal" href="#bias">⚖️ 2. <strong>Bias</strong></a></li>
+<li><a class="reference internal" href="#gradien">🧩 3. <strong>Gradien</strong></a></li>
+<li><a class="reference internal" href="#learning-rate">🚶 4. <strong>Learning Rate (α)</strong></a></li>
+<li><a class="reference internal" href="#epoch-dan-batch">🔁 5. <strong>Epoch dan Batch</strong></a></li>
+<li><a class="reference internal" href="#loss-function">🧮 6. <strong>Loss Function</strong></a></li>
+<li><a class="reference internal" href="#backpropagation">⚙️ 7. <strong>Backpropagation</strong></a></li>
+<li><a class="reference internal" href="#federated-learning-fl">🌍 8. <strong>Federated Learning (FL)</strong></a></li>
+<li><a class="reference internal" href="#momentum">⚡ 9. <strong>Momentum</strong></a></li>
+<li><a class="reference internal" href="#fedavg-federated-averaging">🧭 10. <strong>FedAvg (Federated Averaging)</strong></a></li>
+<li><a class="reference internal" href="#ringkasan-cepat">🔍 Ringkasan Cepat</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
       
       
     </aside>

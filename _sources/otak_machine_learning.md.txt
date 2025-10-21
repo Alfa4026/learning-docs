@@ -1,3 +1,5 @@
+# 📘 Dokumentasi beberapa istilah dalam machine learning
+
 ## 🧠 1. **Bobot (Weight)**
 
 > **Bobot adalah nilai yang mengatur seberapa kuat pengaruh suatu fitur/input terhadap output model.**
