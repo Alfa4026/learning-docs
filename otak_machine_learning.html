@@ -241,9 +241,9 @@
 <div><p><strong>Bobot adalah nilai yang mengatur seberapa kuat pengaruh suatu fitur/input terhadap output model.</strong></p>
 </div></blockquote>
 <p>Bayangkan kamu sedang menilai rumah:</p>
-<blockquote>
-<div><p>harga_rumah = (luas_tanah × 2 juta) + (jumlah_kamar × 10 juta) + (garasi × 5 juta)</p>
-</div></blockquote>
+<p>$$
+\text{harga_rumah} = (\text{luas_tanah} \times 2{,}000{,}000) + (\text{jumlah_kamar} \times 10{,}000{,}000) + (\text{garasi} \times 5{,}000{,}000)
+$$</p>
 <p>Angka <strong>2 juta</strong>, <strong>10 juta</strong>, dan <strong>5 juta</strong> itulah <strong>bobot</strong>.</p>
 <p>Dalam jaringan saraf (neural network):</p>
 <ul class="simple">
@@ -259,9 +259,9 @@
 <div><p><strong>Bias adalah nilai tambahan yang “menggeser” hasil sebelum masuk ke fungsi aktivasi.</strong></p>
 </div></blockquote>
 <p>Contoh sederhana:</p>
-<blockquote>
-<div><p>harga_rumah = (luas_tanah × 2 juta) + (jumlah_kamar × 10 juta) + <strong>20 juta (bias)</strong></p>
-</div></blockquote>
+<p>$$
+\text{harga_rumah} = (\text{luas_tanah} \times 2{,}000{,}000) + (\text{jumlah_kamar} \times 10{,}000{,}000) + 20{,}000{,}000
+$$</p>
 <p>Nilai 20 juta itu tidak tergantung pada input apa pun, tapi membantu model menyesuaikan hasil prediksi agar lebih fleksibel — seperti “titik awal” atau <strong>offset</strong>.</p>
 <p>Tanpa bias, semua garis regresi akan melewati titik (0,0), padahal dunia nyata jarang begitu.</p>
 </section>
@@ -271,17 +271,17 @@
 <blockquote>
 <div><p><strong>Gradien adalah arah dan seberapa besar perubahan yang harus dilakukan terhadap bobot dan bias agar model makin akurat.</strong></p>
 </div></blockquote>
-<p>Secara matematis, gradien adalah <strong>turunan (derivative)</strong> dari fungsi loss terhadap bobot:
-$$
+<p>Secara matematis:</p>
+<p>$$
 \nabla W = \frac{\partial \text{Loss}}{\partial W}
 $$</p>
-<p>Tapi dalam bahasa sehari-hari:</p>
+<p>Dalam bahasa sehari-hari:</p>
 <blockquote>
 <div><p>Gradien = “arah turun bukit paling curam”.</p>
 </div></blockquote>
-<p>Bayangkan kamu berdiri di puncak bukit (tempat kesalahan model masih tinggi).
-Gradien memberi tahu kamu <strong>ke arah mana harus melangkah</strong> agar kamu menuruni bukit (mengurangi error).
-Jika kamu melangkah terlalu besar, kamu bisa “loncat ke lembah lain” — di situlah <strong>learning rate</strong> berperan.</p>
+<p>Bayangkan kamu berdiri di puncak bukit (tempat kesalahan model masih tinggi).<br />
+Gradien memberi tahu kamu <strong>ke arah mana harus melangkah</strong> agar kamu menuruni bukit (mengurangi error).</p>
+<p>Jika kamu melangkah terlalu besar, kamu bisa “loncat ke lembah lain” — di situlah <strong>learning rate</strong> berperan.</p>
 </section>
 <hr class="docutils" />
 <section id="learning-rate">
@@ -301,9 +301,9 @@ Jika kamu melangkah terlalu besar, kamu bisa “loncat ke lembah lain” — di 
 <li><p>Langkah besar = cepat tapi bisa terpeleset.</p></li>
 </ul>
 </div></blockquote>
-<p>Dalam formula update bobot:
-$$
-W_{baru} = W_{lama} - \alpha \times \nabla W
+<p>Formula update bobot:</p>
+<p>$$
+W_{\text{baru}} = W_{\text{lama}} - \alpha \times \nabla W
 $$</p>
 </section>
 <hr class="docutils" />
@@ -327,7 +327,7 @@ $$</p>
 <li><p>Untuk regresi: Mean Squared Error (MSE)</p></li>
 <li><p>Untuk klasifikasi: Cross-Entropy Loss</p></li>
 </ul>
-<p>Loss inilah “bukit” yang coba diturunkan oleh gradien.
+<p>Loss inilah “bukit” yang coba diturunkan oleh gradien.<br />
 Semakin kecil loss, semakin baik modelmu memprediksi.</p>
 </section>
 <hr class="docutils" />
@@ -341,11 +341,11 @@ Semakin kecil loss, semakin baik modelmu memprediksi.</p>
 <li><p>Model melakukan <strong>forward pass</strong> → menghasilkan prediksi.</p></li>
 <li><p>Hitung <strong>loss</strong> antara prediksi dan label asli.</p></li>
 <li><p>Lakukan <strong>backward pass</strong> (turunan berantai) untuk menghitung gradien tiap bobot.</p></li>
-<li><p>Update bobot:
-$$
-W = W - \alpha \times \text{gradien}
-$$</p></li>
+<li><p>Update bobot:</p></li>
 </ol>
+<p>$$
+W = W - \alpha \times \text{gradien}
+$$</p>
 <p>Proses ini diulang ribuan kali.</p>
 </section>
 <hr class="docutils" />
@@ -374,10 +374,10 @@ $$</p></li>
 <blockquote>
 <div><p><strong>Trik untuk mempercepat konvergensi dan menghindari tersesat di lembah kecil.</strong></p>
 </div></blockquote>
-<p>Alih-alih hanya melihat gradien terbaru, momentum juga melihat arah sebelumnya.
+<p>Alih-alih hanya melihat gradien terbaru, momentum juga melihat arah sebelumnya.<br />
 Ibarat bola yang meluncur di bukit, momentum membuatnya tetap bergerak walau gradien sesaat mendatar.</p>
-<p>Formula umumnya:
-$$
+<p>Formula umumnya:</p>
+<p>$$
 v = \beta v + (1 - \beta)\nabla W, \quad W = W - \alpha v
 $$</p>
 </section>
@@ -393,9 +393,9 @@ $$</p>
 <li><p>Klien 2 punya 200 data → model B</p></li>
 <li><p>Klien 3 punya 50 data → model C</p></li>
 </ul>
-<p>Server menggabungkannya:
-$$
-W_{global} = \frac{100W_A + 200W_B + 50W_C}{100 + 200 + 50}
+<p>Server menggabungkannya:</p>
+<p>$$
+W_{\text{global}} = \frac{100W_A + 200W_B + 50W_C}{100 + 200 + 50}
 $$</p>
 <p>Jadi kontribusi tiap klien sebanding dengan jumlah datanya.</p>
 </section>

@@ -6,7 +6,9 @@
 
 Bayangkan kamu sedang menilai rumah:
 
-> harga_rumah = (luas_tanah × 2 juta) + (jumlah_kamar × 10 juta) + (garasi × 5 juta)
+$$
+\text{harga\_rumah} = (\text{luas\_tanah} \times 2{,}000{,}000) + (\text{jumlah\_kamar} \times 10{,}000{,}000) + (\text{garasi} \times 5{,}000{,}000)
+$$
 
 Angka **2 juta**, **10 juta**, dan **5 juta** itulah **bobot**.
 
@@ -24,7 +26,9 @@ Dalam jaringan saraf (neural network):
 
 Contoh sederhana:
 
-> harga_rumah = (luas_tanah × 2 juta) + (jumlah_kamar × 10 juta) + **20 juta (bias)**
+$$
+\text{harga\_rumah} = (\text{luas\_tanah} \times 2{,}000{,}000) + (\text{jumlah\_kamar} \times 10{,}000{,}000) + 20{,}000{,}000
+$$
 
 Nilai 20 juta itu tidak tergantung pada input apa pun, tapi membantu model menyesuaikan hasil prediksi agar lebih fleksibel — seperti “titik awal” atau **offset**.
 
@@ -36,17 +40,18 @@ Tanpa bias, semua garis regresi akan melewati titik (0,0), padahal dunia nyata j
 
 > **Gradien adalah arah dan seberapa besar perubahan yang harus dilakukan terhadap bobot dan bias agar model makin akurat.**
 
-Secara matematis, gradien adalah **turunan (derivative)** dari fungsi loss terhadap bobot:
+Secara matematis:
+
 $$
 \nabla W = \frac{\partial \text{Loss}}{\partial W}
 $$
 
-Tapi dalam bahasa sehari-hari:
-
+Dalam bahasa sehari-hari:
 > Gradien = “arah turun bukit paling curam”.
 
-Bayangkan kamu berdiri di puncak bukit (tempat kesalahan model masih tinggi).
+Bayangkan kamu berdiri di puncak bukit (tempat kesalahan model masih tinggi).  
 Gradien memberi tahu kamu **ke arah mana harus melangkah** agar kamu menuruni bukit (mengurangi error).
+
 Jika kamu melangkah terlalu besar, kamu bisa “loncat ke lembah lain” — di situlah **learning rate** berperan.
 
 ---
@@ -65,9 +70,10 @@ Analogi:
 > * Langkah kecil = aman tapi lama.
 > * Langkah besar = cepat tapi bisa terpeleset.
 
-Dalam formula update bobot:
+Formula update bobot:
+
 $$
-W_{baru} = W_{lama} - \alpha \times \nabla W
+W_{\text{baru}} = W_{\text{lama}} - \alpha \times \nabla W
 $$
 
 ---
@@ -91,7 +97,7 @@ Contoh:
 * Untuk regresi: Mean Squared Error (MSE)
 * Untuk klasifikasi: Cross-Entropy Loss
 
-Loss inilah “bukit” yang coba diturunkan oleh gradien.
+Loss inilah “bukit” yang coba diturunkan oleh gradien.  
 Semakin kecil loss, semakin baik modelmu memprediksi.
 
 ---
@@ -102,13 +108,14 @@ Semakin kecil loss, semakin baik modelmu memprediksi.
 
 Langkah-langkah:
 
-1. Model melakukan **forward pass** → menghasilkan prediksi.
-2. Hitung **loss** antara prediksi dan label asli.
-3. Lakukan **backward pass** (turunan berantai) untuk menghitung gradien tiap bobot.
+1. Model melakukan **forward pass** → menghasilkan prediksi.  
+2. Hitung **loss** antara prediksi dan label asli.  
+3. Lakukan **backward pass** (turunan berantai) untuk menghitung gradien tiap bobot.  
 4. Update bobot:
-   $$
-   W = W - \alpha \times \text{gradien}
-   $$
+
+$$
+W = W - \alpha \times \text{gradien}
+$$
 
 Proses ini diulang ribuan kali.
 
@@ -120,15 +127,14 @@ Proses ini diulang ribuan kali.
 
 Alur sederhananya:
 
-1. Server mengirim **model global** (bobot awal) ke semua klien.
-2. Tiap klien melatih modelnya pada data lokal → menghasilkan **gradien lokal**.
-3. Klien mengirim **gradien (bukan datanya)** ke server.
-4. Server menghitung **rata-rata (FedAvg)** dari semua gradien → memperbarui model global.
+1. Server mengirim **model global** (bobot awal) ke semua klien.  
+2. Tiap klien melatih modelnya pada data lokal → menghasilkan **gradien lokal**.  
+3. Klien mengirim **gradien (bukan datanya)** ke server.  
+4. Server menghitung **rata-rata (FedAvg)** dari semua gradien → memperbarui model global.  
 5. Ulangi siklus ini beberapa ronde.
 
 Jadi:
-
-* Data pengguna tetap di perangkat mereka (privasi terjaga).
+* Data pengguna tetap di perangkat mereka (privasi terjaga).  
 * Hanya bobot atau gradien yang “keliling dunia”.
 
 ---
@@ -137,10 +143,11 @@ Jadi:
 
 > **Trik untuk mempercepat konvergensi dan menghindari tersesat di lembah kecil.**
 
-Alih-alih hanya melihat gradien terbaru, momentum juga melihat arah sebelumnya.
+Alih-alih hanya melihat gradien terbaru, momentum juga melihat arah sebelumnya.  
 Ibarat bola yang meluncur di bukit, momentum membuatnya tetap bergerak walau gradien sesaat mendatar.
 
 Formula umumnya:
+
 $$
 v = \beta v + (1 - \beta)\nabla W, \quad W = W - \alpha v
 $$
@@ -153,13 +160,14 @@ $$
 
 Misal ada 3 klien:
 
-* Klien 1 punya 100 data → model A
-* Klien 2 punya 200 data → model B
-* Klien 3 punya 50 data → model C
+* Klien 1 punya 100 data → model A  
+* Klien 2 punya 200 data → model B  
+* Klien 3 punya 50 data → model C  
 
 Server menggabungkannya:
+
 $$
-W_{global} = \frac{100W_A + 200W_B + 50W_C}{100 + 200 + 50}
+W_{\text{global}} = \frac{100W_A + 200W_B + 50W_C}{100 + 200 + 50}
 $$
 
 Jadi kontribusi tiap klien sebanding dengan jumlah datanya.
@@ -168,15 +176,15 @@ Jadi kontribusi tiap klien sebanding dengan jumlah datanya.
 
 ## 🔍 Ringkasan Cepat
 
-| Istilah                | Fungsi                                    | Analogi                                    |
-| ---------------------- | ----------------------------------------- | ------------------------------------------ |
-| **Bobot (Weight)**     | Menentukan seberapa besar pengaruh input  | Seperti “harga per meter”                  |
-| **Bias**               | Nilai tambahan agar model lebih fleksibel | Seperti “uang muka tetap”                  |
-| **Gradien**            | Arah dan besar perubahan bobot            | Arah turun bukit                           |
-| **Learning Rate**      | Besarnya langkah menuruni bukit           | Ukuran langkah kaki                        |
-| **Loss Function**      | Mengukur kesalahan prediksi               | Seberapa jauh dari target                  |
-| **Epoch / Batch**      | Siklus pembelajaran                       | Satu kali semua data / sepotong kecil data |
-| **Backpropagation**    | Cara menghitung dan memperbarui bobot     | Umpan balik ke belakang                    |
-| **Momentum**           | Mempercepat konvergensi                   | Bola menuruni bukit                        |
-| **Federated Learning** | Latih model tanpa kirim data              | Model keliling, bukan data                 |
-| **FedAvg**             | Rata-rata bobot dari semua klien          | Gabungan pendapat dari semua peserta       |
+| Istilah | Fungsi | Analogi |
+|----------|---------|----------|
+| **Bobot (Weight)** | Menentukan seberapa besar pengaruh input | Seperti “harga per meter” |
+| **Bias** | Nilai tambahan agar model lebih fleksibel | Seperti “uang muka tetap” |
+| **Gradien** | Arah dan besar perubahan bobot | Arah turun bukit |
+| **Learning Rate** | Besarnya langkah menuruni bukit | Ukuran langkah kaki |
+| **Loss Function** | Mengukur kesalahan prediksi | Seberapa jauh dari target |
+| **Epoch / Batch** | Siklus pembelajaran | Satu kali semua data / sepotong kecil data |
+| **Backpropagation** | Cara menghitung dan memperbarui bobot | Umpan balik ke belakang |
+| **Momentum** | Mempercepat konvergensi | Bola menuruni bukit |
+| **Federated Learning** | Latih model tanpa kirim data | Model keliling, bukan data |
+| **FedAvg** | Rata-rata bobot dari semua klien | Gabungan pendapat dari semua peserta |
