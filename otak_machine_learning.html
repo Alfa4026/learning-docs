@@ -272,9 +272,9 @@
 <div><p><strong>Gradien adalah arah dan seberapa besar perubahan yang harus dilakukan terhadap bobot dan bias agar model makin akurat.</strong></p>
 </div></blockquote>
 <p>Secara matematis, gradien adalah <strong>turunan (derivative)</strong> dari fungsi loss terhadap bobot:
-[
+$$
 \nabla W = \frac{\partial \text{Loss}}{\partial W}
-]</p>
+$$</p>
 <p>Tapi dalam bahasa sehari-hari:</p>
 <blockquote>
 <div><p>Gradien = “arah turun bukit paling curam”.</p>
@@ -302,9 +302,9 @@ Jika kamu melangkah terlalu besar, kamu bisa “loncat ke lembah lain” — di 
 </ul>
 </div></blockquote>
 <p>Dalam formula update bobot:
-[
+$$
 W_{baru} = W_{lama} - \alpha \times \nabla W
-]</p>
+$$</p>
 </section>
 <hr class="docutils" />
 <section id="epoch-dan-batch">
@@ -342,9 +342,9 @@ Semakin kecil loss, semakin baik modelmu memprediksi.</p>
 <li><p>Hitung <strong>loss</strong> antara prediksi dan label asli.</p></li>
 <li><p>Lakukan <strong>backward pass</strong> (turunan berantai) untuk menghitung gradien tiap bobot.</p></li>
 <li><p>Update bobot:
-[
+$$
 W = W - \alpha \times \text{gradien}
-]</p></li>
+$$</p></li>
 </ol>
 <p>Proses ini diulang ribuan kali.</p>
 </section>
@@ -377,9 +377,9 @@ W = W - \alpha \times \text{gradien}
 <p>Alih-alih hanya melihat gradien terbaru, momentum juga melihat arah sebelumnya.
 Ibarat bola yang meluncur di bukit, momentum membuatnya tetap bergerak walau gradien sesaat mendatar.</p>
 <p>Formula umumnya:
-[
+$$
 v = \beta v + (1 - \beta)\nabla W, \quad W = W - \alpha v
-]</p>
+$$</p>
 </section>
 <hr class="docutils" />
 <section id="fedavg-federated-averaging">
@@ -394,9 +394,9 @@ v = \beta v + (1 - \beta)\nabla W, \quad W = W - \alpha v
 <li><p>Klien 3 punya 50 data → model C</p></li>
 </ul>
 <p>Server menggabungkannya:
-[
+$$
 W_{global} = \frac{100W_A + 200W_B + 50W_C}{100 + 200 + 50}
-]</p>
+$$</p>
 <p>Jadi kontribusi tiap klien sebanding dengan jumlah datanya.</p>
 </section>
 <hr class="docutils" />
