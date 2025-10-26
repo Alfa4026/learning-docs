@@ -11,7 +11,7 @@
 *(Penelitian dilakukan saat magang di Google)*
 *(Preprint. Sedang ditinjau.)*
 
-Paper: URL [https://arxiv.org/pdf/1909.06335].
+Paper: URL [https://arxiv.org/pdf/1909.06335](https://arxiv.org/pdf/1909.06335).
 
 ---
 
