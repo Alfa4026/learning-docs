@@ -11,6 +11,7 @@
 *(Penelitian dilakukan saat magang di Google)*
 *(Preprint. Sedang ditinjau.)*
 
+Paper: https://arxiv.org/pdf/1909.06335
 ---
 
 **Abstrak**
