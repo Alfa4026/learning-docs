@@ -1,0 +1,714 @@
+<!doctype html>
+<html class="no-js" lang="id" data-content_root="./">
+  <head><meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="index" title="Indeks" href="genindex.html"><link rel="search" title="Pencarian" href="search.html">
+
+    <!-- Generated with Sphinx 8.2.3 and Furo 2025.09.25 -->
+        <title>Translate &amp; penjelasan paper Measuring the Effects of Non-Identical Data Distribution for Federated Visual Classification - Dokumentasi Belajar 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=d111a655" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=580074bf" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
+    
+    
+
+
+<style>
+  body {
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
+  
+  }
+  @media not print {
+    body[data-theme="dark"] {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+    @media (prefers-color-scheme: dark) {
+      body:not([data-theme="light"]) {
+        --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+      }
+    }
+  }
+</style></head>
+  <body>
+    
+    <script>
+      document.body.dataset.theme = localStorage.getItem("theme") || "auto";
+    </script>
+    
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 1024 1024">
+      <path d="M408 442h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8zm-8 204c0 4.4 3.6 8 8 8h480c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8H408c-4.4 0-8 3.6-8 8v56zm504-486H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zm0 632H120c-4.4 0-8 3.6-8 8v56c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-56c0-4.4-3.6-8-8-8zM115.4 518.9L271.7 642c5.8 4.6 14.4.5 14.4-6.9V388.9c0-7.4-8.5-11.5-14.4-6.9L115.4 505.1a8.74 8.74 0 0 0 0 13.8z"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+  <symbol id="svg-sun" viewBox="0 0 24 24">
+    <title>Light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather-sun">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon" viewBox="0 0 24 24">
+    <title>Dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-moon">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+    </svg>
+  </symbol>
+  <symbol id="svg-sun-with-moon" viewBox="0 0 24 24">
+    <title>Auto light/dark, in light mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path style="opacity: 50%" d="M 5.411 14.504 C 5.471 14.504 5.532 14.504 5.591 14.504 C 3.639 16.319 4.383 19.569 6.931 20.352 C 7.693 20.586 8.512 20.551 9.25 20.252 C 8.023 23.207 4.056 23.725 2.11 21.184 C 0.166 18.642 1.702 14.949 4.874 14.536 C 5.051 14.512 5.231 14.5 5.411 14.5 L 5.411 14.504 Z"/>
+      <line x1="14.5" y1="3.25" x2="14.5" y2="1.25"/>
+      <line x1="14.5" y1="15.85" x2="14.5" y2="17.85"/>
+      <line x1="10.044" y1="5.094" x2="8.63" y2="3.68"/>
+      <line x1="19" y1="14.05" x2="20.414" y2="15.464"/>
+      <line x1="8.2" y1="9.55" x2="6.2" y2="9.55"/>
+      <line x1="20.8" y1="9.55" x2="22.8" y2="9.55"/>
+      <line x1="10.044" y1="14.006" x2="8.63" y2="15.42"/>
+      <line x1="19" y1="5.05" x2="20.414" y2="3.636"/>
+      <circle cx="14.5" cy="9.55" r="3.6"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-moon-with-sun" viewBox="0 0 24 24">
+    <title>Auto light/dark, in dark mode</title>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round"
+      class="icon-custom-derived-from-feather-sun-and-tabler-moon">
+      <path d="M 8.282 7.007 C 8.385 7.007 8.494 7.007 8.595 7.007 C 5.18 10.184 6.481 15.869 10.942 17.24 C 12.275 17.648 13.706 17.589 15 17.066 C 12.851 22.236 5.91 23.143 2.505 18.696 C -0.897 14.249 1.791 7.786 7.342 7.063 C 7.652 7.021 7.965 7 8.282 7 L 8.282 7.007 Z"/>
+      <line style="opacity: 50%" x1="18" y1="3.705" x2="18" y2="2.5"/>
+      <line style="opacity: 50%" x1="18" y1="11.295" x2="18" y2="12.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="4.816" x2="14.464" y2="3.964"/>
+      <line style="opacity: 50%" x1="20.711" y1="10.212" x2="21.563" y2="11.063"/>
+      <line style="opacity: 50%" x1="14.205" y1="7.5" x2="13.001" y2="7.5"/>
+      <line style="opacity: 50%" x1="21.795" y1="7.5" x2="23" y2="7.5"/>
+      <line style="opacity: 50%" x1="15.316" y1="10.184" x2="14.464" y2="11.036"/>
+      <line style="opacity: 50%" x1="20.711" y1="4.789" x2="21.563" y2="3.937"/>
+      <circle style="opacity: 50%" cx="18" cy="7.5" r="2.169"/>
+    </svg>
+  </symbol>
+  <symbol id="svg-pencil" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-pencil-code">
+      <path d="M4 20h4l10.5 -10.5a2.828 2.828 0 1 0 -4 -4l-10.5 10.5v4" />
+      <path d="M13.5 6.5l4 4" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+  <symbol id="svg-eye" viewBox="0 0 24 24">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+      stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="icon-tabler-eye-code">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M10 12a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+      <path
+        d="M11.11 17.958c-3.209 -.307 -5.91 -2.293 -8.11 -5.958c2.4 -4 5.4 -6 9 -6c3.6 0 6.6 2 9 6c-.21 .352 -.427 .688 -.647 1.008" />
+      <path d="M20 21l2 -2l-2 -2" />
+      <path d="M17 17l-2 2l2 2" />
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle site navigation sidebar">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc" aria-label="Toggle table of contents sidebar">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+<a class="skip-to-content muted-link" href="#furo-main-content">Skip to content</a>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <span class="icon"><svg><use href="#svg-menu"></use></svg></span>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="index.html"><div class="brand">Dokumentasi Belajar 1.0</div></a>
+    </div>
+    <div class="header-right">
+      <div class="theme-toggle-container theme-toggle-header">
+        <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+          <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+          <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+          <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+          <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+        </button>
+      </div>
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+  
+  <span class="sidebar-brand-text">Dokumentasi Belajar 1.0</span>
+  
+</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+  <input class="sidebar-search" placeholder="Pencarian" name="q" aria-label="Pencarian">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form>
+<div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
+  <p class="caption" role="heading"><span class="caption-text">📖 Daftar Materi</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tmux.html">📘 Dokumentasi Penggunaan <code class="docutils literal notranslate"><span class="pre">tmux</span></code> di Ubuntu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Website_Sphinx.html">📘 Dokumentasi: Membuat Website Dokumentasi Belajar dengan Sphinx + GitHub Pages (Auto Deploy)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="otak_machine_learning.html">📘 Dokumentasi beberapa istilah dalam machine learning</a></li>
+</ul>
+
+</div>
+</div>
+
+      </div>
+      
+    </div>
+  </aside>
+  <div class="main">
+    <div class="content">
+      <div class="article-container">
+        <a href="#" class="back-to-top muted-link">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+            <path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12z"></path>
+          </svg>
+          <span>Back to top</span>
+        </a>
+        <div class="content-icon-container">
+          <div class="view-this-page">
+  <a class="muted-link" href="_sources/translate & penjelasan paper Measuring the Effects of Non-Identical Data Distribution for Federated Visual Classification.md.txt" title="View this page">
+    <svg><use href="#svg-eye"></use></svg>
+    <span class="visually-hidden">View this page</span>
+  </a>
+</div>
+<div class="theme-toggle-container theme-toggle-content">
+            <button class="theme-toggle" aria-label="Toggle Light / Dark / Auto color theme">
+              <svg class="theme-icon-when-auto-light"><use href="#svg-sun-with-moon"></use></svg>
+              <svg class="theme-icon-when-auto-dark"><use href="#svg-moon-with-sun"></use></svg>
+              <svg class="theme-icon-when-dark"><use href="#svg-moon"></use></svg>
+              <svg class="theme-icon-when-light"><use href="#svg-sun"></use></svg>
+            </button>
+          </div>
+          <label class="toc-overlay-icon toc-content-icon" for="__toc">
+            <span class="icon"><svg><use href="#svg-toc"></use></svg></span>
+          </label>
+        </div>
+        <article role="main" id="furo-main-content">
+          <section class="tex2jax_ignore mathjax_ignore" id="translate-penjelasan-paper-measuring-the-effects-of-non-identical-data-distribution-for-federated-visual-classification">
+<h1>Translate &amp; penjelasan paper Measuring the Effects of Non-Identical Data Distribution for Federated Visual Classification<a class="headerlink" href="#translate-penjelasan-paper-measuring-the-effects-of-non-identical-data-distribution-for-federated-visual-classification" title="Link to this heading">¶</a></h1>
+<section id="translate">
+<h2>Translate<a class="headerlink" href="#translate" title="Link to this heading">¶</a></h2>
+<p><strong>Mengukur Efek Distribusi Data Non-Identik untuk Klasifikasi Visual Terfederasi</strong></p>
+<p><strong>Penulis:</strong></p>
+<ul class="simple">
+<li><p>Tzu-Ming Harry Hsu (MIT CSAIL, stmharry&#64;mit.edu)</p></li>
+<li><p>Hang Qi (Google Research, hangqi&#64;google.com)</p></li>
+<li><p>Matthew Brown (Google Research, mtbr&#64;google.com)</p></li>
+</ul>
+<p><em>(Penelitian dilakukan saat magang di Google)</em>
+<em>(Preprint. Sedang ditinjau.)</em></p>
+<hr class="docutils" />
+<p><strong>Abstrak</strong></p>
+<p>Federated Learning (Pembelajaran Terfederasi) memungkinkan model visual dilatih dengan cara yang menjaga privasi menggunakan data dunia nyata dari perangkat seluler. Mengingat sifatnya yang terdistribusi, statistik data di seluruh perangkat ini kemungkinan besar akan berbeda secara signifikan. Dalam penelitian ini, kami mengamati efek distribusi data non-identik semacam itu pada klasifikasi visual melalui Federated Learning. Kami mengusulkan cara untuk mensintesis dataset dengan rentang keidentikan (identicalness) yang berkelanjutan dan menyediakan ukuran kinerja untuk algoritma Federated Averaging. Kami menunjukkan bahwa kinerja menurun seiring semakin berbedanya distribusi, dan mengusulkan strategi mitigasi melalui momentum server. Eksperimen pada CIFAR-10 menunjukkan peningkatan kinerja klasifikasi pada berbagai tingkat non-identik, dengan akurasi klasifikasi meningkat dari 30.1% menjadi 76.9% dalam pengaturan yang paling tidak seimbang (skewed).</p>
+<hr class="docutils" />
+<p><strong>1. Pendahuluan</strong></p>
+<p>Federated Learning (FL) adalah kerangka kerja yang menjaga privasi untuk melatih model dari data pengguna terdesentralisasi yang berada di perangkat edge. Dengan algoritma Federated Averaging (FedAvg), dalam setiap putaran pembelajaran terfederasi, setiap perangkat yang berpartisipasi (juga disebut klien), menerima model awal dari server pusat, melakukan stochastic gradient descent (SGD) pada dataset lokalnya dan mengirimkan kembali gradiennya. Server kemudian mengagregasi semua gradien dari klien yang berpartisipasi dan memperbarui model awal.</p>
+<p>Meskipun dalam pelatihan di pusat data (data-center), batch biasanya dapat diasumsikan IID (independen dan terdistribusi secara identik), asumsi ini kemungkinan tidak berlaku dalam pengaturan Federated Learning. Dalam penelitian ini, kami secara khusus mempelajari efek distribusi data non-identik pada setiap klien, dengan asumsi data diambil secara independen dari distribusi lokal yang berbeda. Kami mempertimbangkan rentang distribusi non-identik yang berkelanjutan, dan memberikan hasil empiris pada berbagai hiperparameter dan strategi optimasi.</p>
+<hr class="docutils" />
+<p><strong>2. Karya Terkait</strong></p>
+<p>Beberapa penulis telah mengeksplorasi algoritma FedAvg pada partisi data klien non-identik yang dihasilkan dari dataset klasifikasi gambar. McMahan et al. mensintesis pemisahan pengguna non-identik patologis dari dataset MNIST, mengurutkan contoh pelatihan berdasarkan label kelas dan mempartisinya menjadi shard sehingga setiap klien diberi 2 shard. Mereka menunjukkan bahwa FedAvg pada klien non-identik masih konvergen ke akurasi 99%, meskipun membutuhkan lebih banyak putaran daripada klien identik. Dengan cara pengurutan-dan-partisi yang serupa, Zhao et al. dan Sattler et al. menghasilkan partisi ekstrem pada dataset CIFAR-10, membentuk populasi yang terdiri dari total 10 klien. Pengaturan ini agak tidak realistis, karena pembelajaran terfederasi praktis biasanya melibatkan kumpulan klien yang lebih besar, dan distribusi yang lebih kompleks daripada partisi sederhana.</p>
+<p>Penulis lain melihat distribusi data yang lebih realistis pada klien. Misalnya, Caldas et al. menggunakan Extended MNIST dengan partisi berdasarkan penulis digit, bukan hanya mempartisi berdasarkan kelas digit. Berkaitan erat dengan penelitian kami, Yurochkin et al. menggunakan distribusi Dirichlet dengan parameter konsentrasi 0.5 untuk mensintesis dataset non-identik. Kami memperluas ide ini, mengeksplorasi rentang konsentrasi α yang berkelanjutan, dengan eksplorasi rinci tentang pengaturan hiperparameter dan optimasi yang optimal.</p>
+<p>Karya sebelumnya di sisi teoritis mempelajari konvergensi varian FedAvg dalam kondisi yang berbeda. Sahu et al. memperkenalkan istilah proksimal pada objektif klien dan membuktikan jaminan konvergensi. Li et al. menganalisis FedAvg di bawah skema sampling dan perataan (averaging) yang tepat dalam masalah yang sangat konveks (strongly convex).</p>
+<hr class="docutils" />
+<p><strong>3. Data Klien Non-Identik Sintetis</strong></p>
+<p>Dalam tugas klasifikasi visual kami, kami berasumsi pada setiap klien, contoh pelatihan diambil secara independen dengan label kelas mengikuti distribusi kategorikal atas N kelas yang diparameterisasi oleh vektor q (<span class="math notranslate nohighlight">\(q_{i}\ge0,i\in[1,N]\)</span> dan <span class="math notranslate nohighlight">\(||q||_{1}=1\)</span>). Untuk mensintesis populasi klien non-identik, kami mengambil <span class="math notranslate nohighlight">\(q\sim Dir(\alpha p)\)</span> dari distribusi Dirichlet, di mana p mencirikan distribusi kelas prior atas N kelas, dan <span class="math notranslate nohighlight">\(\alpha&gt;0\)</span> adalah parameter konsentrasi yang mengontrol keidentikan antar klien. Kami bereksperimen dengan 8 nilai untuk α untuk menghasilkan populasi yang mencakup spektrum keidentikan. Dengan <span class="math notranslate nohighlight">\(\alpha\rightarrow\infty\)</span>, semua klien memiliki distribusi yang identik dengan prior; dengan <span class="math notranslate nohighlight">\(\alpha\rightarrow0\)</span> pada ekstrem lainnya, setiap klien hanya menyimpan contoh dari satu kelas yang dipilih secara acak.</p>
+<p>Dalam penelitian ini, kami menggunakan dataset klasifikasi gambar CIFAR-10, yang berisi 60.000 gambar (50.000 untuk pelatihan, 10.000 untuk pengujian) dari 10 kelas. Kami menghasilkan populasi seimbang yang terdiri dari 100 klien, masing-masing menyimpan 500 gambar. Kami menetapkan distribusi prior menjadi seragam di 10 kelas, identik dengan set pengujian tempat kami melaporkan kinerja. Untuk setiap klien, dengan α tertentu, kami mengambil sampel q dan menetapkan jumlah gambar yang sesuai dari 10 kelas kepada klien tersebut. Gambar 1 mengilustrasikan populasi yang diambil dari distribusi Dirichlet dengan parameter konsentrasi yang berbeda.</p>
+<ul class="simple">
+<li><p><strong>(Gambar 1 tidak dapat ditampilkan di sini, namun keterangannya adalah sebagai berikut):</strong>
+<strong>Gambar 1: Populasi sintetis dengan klien non-identik.</strong> Distribusi antar kelas direpresentasikan dengan warna berbeda.</p>
+<ul>
+<li><p>(a) Urut-dan-partisi: 10 klien yang dihasilkan dari skema urut-dan-partisi, masing-masing diberi 2 kelas.</p></li>
+<li><p>(b) Dirichlet, α → ∞: populasi yang dihasilkan dari Distribusi Dirichlet.</p></li>
+<li><p>(c) Dirichlet, α = 100.0: populasi yang dihasilkan dari Distribusi Dirichlet.</p></li>
+<li><p>(d) Dirichlet, α = 1.0: populasi yang dihasilkan dari Distribusi Dirichlet.</p></li>
+<li><p>(e) Dirichlet, α → 0.0: populasi yang dihasilkan dari Distribusi Dirichlet, masing-masing 30 klien acak untuk (b-e).</p></li>
+<li><p>Label sumbu horizontal: Distribusi kelas. Label sumbu vertikal: Klien.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>4. Eksperimen dan Hasil</strong></p>
+<p>Dengan persiapan dataset di atas, kami sekarang melanjutkan untuk mengukur kinerja algoritma FedAvg standar pada berbagai distribusi mulai dari identik hingga non-identik. Kami menggunakan arsitektur CNN dan notasi yang sama seperti pada McMahan et al. kecuali bahwa weight decay 0.004 digunakan dan tidak ada jadwal penurunan learning rate (learning rate decay) yang diterapkan. Model ini bukanlah yang tercanggih (state-of-the-art) pada dataset CIFAR-10, tetapi cukup untuk menunjukkan kinerja relatif untuk tujuan investigasi kami.</p>
+<p>FedAvg dijalankan dengan ukuran batch klien <span class="math notranslate nohighlight">\(B=64\)</span>, jumlah epoch lokal <span class="math notranslate nohighlight">\(E\in\{1,5\}\)</span>, dan fraksi pelaporan <span class="math notranslate nohighlight">\(C\in\{0.05,0.1,0.2,0.4\}\)</span> (sesuai dengan 5, 10, 20, dan 40 klien yang berpartisipasi dalam setiap putaran tunggal) untuk total 10.000 putaran komunikasi. Kami melakukan pencarian hiperparameter pada grid learning rate klien <span class="math notranslate nohighlight">\(\eta\in\{10^{-4},3\times10^{-4},...,10^{-1},3\times10^{-1}\}\)</span>.</p>
+<p><strong>4.1 Kinerja Klasifikasi dengan Distribusi Non-Identik</strong></p>
+<p>Gambar 2 menunjukkan kinerja klasifikasi sebagai fungsi dari parameter konsentrasi Dirichlet α (α yang lebih besar menyiratkan distribusi yang lebih identik). Perubahan signifikan dalam akurasi uji terjadi di sekitar α rendah ketika klien mendekati hanya memiliki satu kelas. Meningkatkan fraksi pelaporan C menghasilkan keuntungan yang semakin berkurang (diminishing returns), dan peningkatan kinerja sangat marjinal untuk dataset klien yang terdistribusi secara identik. Menariknya, untuk kasus anggaran putaran optimasi tetap, menyinkronkan bobot lebih sering <span class="math notranslate nohighlight">\((E=1)\)</span> tidak selalu meningkatkan akurasi pada data non-identik.</p>
+<p>Selain penurunan akurasi akhir pelatihan, kami juga mengamati error pelatihan yang lebih fluktuatif dalam kasus data yang lebih non-identik, lihat Gambar 3. Proses pelatihan dengan fraksi pelaporan kecil kesulitan untuk konvergen dalam 10.000 putaran komunikasi.</p>
+<ul class="simple">
+<li><p><strong>(Gambar 2 tidak dapat ditampilkan di sini, namun keterangannya adalah sebagai berikut):</strong>
+<strong>Gambar 2: Akurasi FedAvg untuk α yang berbeda.</strong> Setiap sel dioptimalkan berdasarkan learning rate, dengan setiap learning rate dirata-ratakan dari 5 kali proses pada populasi yang berbeda di bawah α yang sama.</p>
+<ul>
+<li><p>(a) Epoch Lokal E = 1. Nilai akurasi tertera dalam heatmap.</p></li>
+<li><p>(b) Epoch Lokal E = 5. Nilai akurasi tertera dalam heatmap.</p></li>
+<li><p>Sumbu Y: Fraksi Pelaporan C. Sumbu X: α. Label: Akurasi Uji.</p></li>
+</ul>
+</li>
+<li><p><strong>(Gambar 3 tidak dapat ditampilkan di sini, namun keterangannya adalah sebagai berikut):</strong>
+<strong>Gambar 3: Kurva pembelajaran FedAvg dengan learning rate tetap.</strong> Hasil pembelajaran terpusat (garis putus-putus) berasal dari tutorial TensorFlow. Kurva menunjukkan Akurasi Uji vs Putaran Komunikasi untuk berbagai kombinasi α, E, dan C. Sumbu X berkisar 0-10000.</p></li>
+<li><p><strong>(Gambar 4 tidak dapat ditampilkan di sini, namun keterangannya adalah sebagai berikut):</strong>
+<strong>Gambar 4: Akurasi uji FedAvg dalam pencarian hiperparameter.</strong> (a-b) Fraksi pelaporan tinggi dan (c-d) rendah dari 100 klien didemonstrasikan. Akurasi acak (chance accuracy) ditunjukkan oleh garis putus-putus. Grafik menunjukkan Akurasi Uji vs Learning Rate untuk berbagai nilai α.</p>
+<ul>
+<li><p>(a) Epoch Lokal E = 1, Fraksi Pelaporan C = 0.40.</p></li>
+<li><p>(b) Epoch Lokal E = 5, Fraksi Pelaporan C = 0.40.</p></li>
+<li><p>(c) Epoch Lokal E = 1, Fraksi Pelaporan C = 0.05.</p></li>
+<li><p>(d) Epoch Lokal E = 5, Fraksi Pelaporan C = 0.05.</p></li>
+<li><p>Sumbu X (Learning Rate) berkisar 10⁻⁴ hingga 10⁻¹.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Sensitivitas Hiperparameter.</strong> Selain mempengaruhi akurasi keseluruhan pada set pengujian, kondisi pembelajaran seperti yang ditentukan oleh C dan α memiliki efek signifikan pada sensitivitas hiperparameter. Pada ujung identik dengan α besar, rentang learning rate (sekitar dua orde magnitudo) dapat menghasilkan akurasi yang baik pada set pengujian. Namun, dengan nilai C dan α yang lebih kecil, penyesuaian (tuning) learning rate yang cermat diperlukan untuk mencapai akurasi yang baik. Lihat Gambar 4.</p>
+<p><strong>4.2 Mengakumulasi Pembaruan Model dengan Momentum</strong></p>
+<p>Menggunakan momentum di atas SGD telah terbukti sangat sukses dalam mempercepat pelatihan jaringan dengan akumulasi riwayat gradien untuk meredam osilasi. Hal ini tampaknya sangat relevan untuk FL di mana pihak yang berpartisipasi mungkin memiliki distribusi data yang jarang, dan memegang subset label yang terbatas. Dalam sub-bagian ini kami menguji efek momentum di server pada kinerja FedAvg.</p>
+<p>FedAvg standar memperbarui bobot melalui <span class="math notranslate nohighlight">\(w \leftarrow w - \Delta w\)</span>, di mana <span class="math notranslate nohighlight">\(\Delta w = \sum_{k=1}^{K} \frac{n_k}{n} \Delta w_k\)</span> (<span class="math notranslate nohighlight">\(n_k\)</span> adalah jumlah contoh, <span class="math notranslate nohighlight">\(\Delta w_k\)</span> adalah pembaruan bobot dari klien ke-k, dan <span class="math notranslate nohighlight">\(n = \sum_{k=1}^{K} n_k\)</span>). Untuk menambahkan momentum di server, kami malah menghitung <span class="math notranslate nohighlight">\(v \leftarrow \beta v + \Delta w\)</span>, dan memperbarui model dengan <span class="math notranslate nohighlight">\(w \leftarrow w - v\)</span>. Kami menyebut pendekatan ini FedAvgM (Federated Averaging with Server Momentum).</p>
+<p>Dalam eksperimen, kami menggunakan Nesterov accelerated gradient dengan momentum <span class="math notranslate nohighlight">\(\beta \in \{0, 0.7, 0.9, 0.97, 0.99, 0.997\}\)</span>. Arsitektur model, ukuran batch klien B, dan learning rate η sama seperti FedAvg standar di sub-bagian sebelumnya. Learning rate dari optimizer server dijaga konstan pada 1.0.</p>
+<p><strong>Efek momentum server.</strong> Gambar 5 menunjukkan efek pembelajaran dengan data non-identik baik dengan maupun tanpa momentum server. Akurasi uji meningkat secara konsisten untuk FedAvgM dibandingkan FedAvg, dengan kinerja mendekati baseline pembelajaran terpusat (86.0%) dalam banyak kasus. Sebagai contoh, dengan <span class="math notranslate nohighlight">\(E=1\)</span> dan <span class="math notranslate nohighlight">\(C=0.05\)</span>, kinerja FedAvgM tetap relatif konstan dan di atas 75%, sedangkan akurasi FedAvg turun drastis menjadi sekitar 35%.</p>
+<ul class="simple">
+<li><p><strong>(Gambar 5 tidak dapat ditampilkan di sini, namun keterangannya adalah sebagai berikut):</strong>
+<strong>Gambar 5: Kurva kinerja FedAvgM dan FedAvg untuk tingkat non-identik yang berbeda.</strong> Data semakin non-identik ke arah kanan. Paling baik dilihat dalam warna. Grafik menunjukkan Akurasi Uji vs α untuk berbagai kombinasi E dan C, membandingkan FedAvg dan FedAvgM.</p>
+<ul>
+<li><p>(a) Epoch Lokal E = 1.</p></li>
+<li><p>(b) Epoch Lokal E = 5.</p></li>
+<li><p>Sumbu X (α) berkisar 10⁻² hingga 10².</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Ketergantungan hiperparameter pada C dan E.</strong> Penyesuaian hiperparameter lebih sulit untuk FedAvgM karena melibatkan hiperparameter tambahan β. Dalam Gambar 6, kami memplot akurasi terhadap learning rate efektif yang didefinisikan sebagai <span class="math notranslate nohighlight">\(\eta_{eff} = \eta / (1 - \beta)\)</span> yang menunjukkan <span class="math notranslate nohighlight">\(\eta_{eff}\)</span> optimal untuk setiap set kondisi pembelajaran. Terutama, ketika fraksi pelaporan C besar, pemilihan β lebih mudah dan rentang nilai dalam dua orde magnitudo menghasilkan akurasi uji yang wajar. Sebaliknya, ketika hanya beberapa klien yang melapor setiap putaran, jendela yang layak untuk <span class="math notranslate nohighlight">\(\eta_{eff}\)</span> bisa sekecil hanya satu orde magnitudo. Untuk mencegah pembaruan klien menyimpang (diverging), kami juga harus menggunakan kombinasi learning rate absolut rendah dan momentum tinggi. Parameter epoch lokal E juga mempengaruhi pilihan learning rate. Optimasi lokal yang ekstensif meningkatkan varians pembaruan bobot klien, oleh karena itu <span class="math notranslate nohighlight">\(\eta_{eff}\)</span> yang lebih rendah diperlukan untuk menetralkan noise.</p>
+<ul class="simple">
+<li><p><strong>(Gambar 6 tidak dapat ditampilkan di sini, namun keterangannya adalah sebagai berikut):</strong>
+<strong>Gambar 6: Sensitivitas akurasi uji untuk FedAvgM.</strong> Diplot untuk <span class="math notranslate nohighlight">\(\alpha=1\)</span>. Learning rate efektif didefinisikan sebagai <span class="math notranslate nohighlight">\(\eta_{eff} = \eta / (1 - \beta)\)</span>. Ukuran proporsional dengan learning rate klien η dan titik paling berkinerja ditandai dengan crosshair. Grafik menunjukkan Akurasi Uji vs Learning Rate Efektif (<span class="math notranslate nohighlight">\(\eta_{eff}\)</span>) dengan ukuran dan warna titik yang berbeda merepresentasikan Learning Rate absolut (η).</p>
+<ul>
+<li><p>(a) Epoch Lokal E = 1, Fraksi Pelaporan C = 0.40.</p></li>
+<li><p>(b) Epoch Lokal E = 5, Fraksi Pelaporan C = 0.40.</p></li>
+<li><p>(c) Epoch Lokal E = 1, Fraksi Pelaporan C = 0.05.</p></li>
+<li><p>(d) Epoch Lokal E = 5, Fraksi Pelaporan C = 0.05.</p></li>
+<li><p>Sumbu X (Learning Rate Efektif) berkisar 10⁻⁴ hingga 10¹.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+<p><strong>Referensi</strong></p>
+<ul class="simple">
+<li><p>Sebastian Caldas, Peter Wu, Tian Li, Jakub Konečnỳ, H Brendan McMahan, Virginia Smith, dan Ameet Talwalkar. Leaf: Sebuah benchmark untuk pengaturan terfederasi. preprint arXiv:1812.01097, 2018.</p></li>
+<li><p>Gregory Cohen, Saeed Afshar, Jonathan Tapson, dan André van Schaik. EMNIST: ekstensi MNIST untuk huruf tulisan tangan. preprint arXiv:1702.05373, 2017.</p></li>
+<li><p>Alex Krizhevsky, Geoffrey Hinton, et al. Mempelajari beberapa lapisan fitur dari gambar kecil. Laporan teknis, Citeseer, 2009.</p></li>
+<li><p>Xiang Li, Kaixuan Huang, Wenhao Yang, Shusen Wang, dan Zhihua Zhang. Tentang konvergensi FedAvg pada data non-IID. preprint arXiv:1907.02189, 2019.</p></li>
+<li><p>Brendan McMahan, Eider Moore, Daniel Ramage, Seth Hampson, dan Blaise Aguera y Arcas. Pembelajaran jaringan dalam yang efisien komunikasi dari data terdesentralisasi. Dalam Artificial Intelligence and Statistics, halaman 1273-1282, 2017.</p></li>
+<li><p>Yu Nesterov. Metode gradien untuk meminimalkan fungsi objektif komposit. 2007.</p></li>
+<li><p>Anit Kumar Sahu, Tian Li, Maziar Sanjabi, Manzil Zaheer, Ameet Talwalkar, dan Virginia Smith. Tentang konvergensi optimasi terfederasi dalam jaringan heterogen. preprint arXiv:1812.06127, 2018.</p></li>
+<li><p>Felix Sattler, Simon Wiedemann, Klaus-Robert Müller, dan Wojciech Samek. Pembelajaran terfederasi yang kuat dan efisien komunikasi dari data non-IID. preprint arXiv:1903.02891, 2019.</p></li>
+<li><p>Christopher J Shallue, Jaehoon Lee, Joe Antognini, Jascha Sohl-Dickstein, Roy Frostig, dan George E Dahl. Mengukur efek paralelisme data pada pelatihan jaringan saraf. preprint arXiv:1811.03600, 2018.</p></li>
+<li><p>TensorFlow. Jaringan saraf konvolusional tingkat lanjut. URL <a class="reference external" href="https://www.tensorflow.org/tutorials/images/deep_cnn">https://www.tensorflow.org/tutorials/images/deep_cnn</a>.</p></li>
+<li><p>Mikhail Yurochkin, Mayank Agarwal, Soumya Ghosh, Kristjan Greenewald, Nghia Hoang, dan Yasaman Khazaeni. Pembelajaran terfederasi nonparametrik Bayesian dari jaringan saraf. Dalam International Conference on Machine Learning, halaman 7252-7261, 2019.</p></li>
+<li><p>Yue Zhao, Meng Li, Liangzhen Lai, Naveen Suda, Damon Civin, dan Vikas Chandra. Pembelajaran terfederasi dengan data non-IID. preprint arXiv:1806.00582, 2018.</p></li>
+</ul>
+</section>
+<section id="penjelasan-1">
+<h2>PENJELASAN 1:<a class="headerlink" href="#penjelasan-1" title="Link to this heading">¶</a></h2>
+</section>
+<section id="apa-sih-masalah-utamanya-belajar-bareng-tapi-data-beda-beda">
+<h2><strong>Apa Sih Masalah Utamanya? Belajar Bareng Tapi Data Beda-beda</strong><a class="headerlink" href="#apa-sih-masalah-utamanya-belajar-bareng-tapi-data-beda-beda" title="Link to this heading">¶</a></h2>
+<p>Jurnal ini membahas tantangan dalam <strong>Federated Learning (FL)</strong>, khususnya untuk tugas <strong>klasifikasi visual</strong> (mengenali gambar).</p>
+<ul class="simple">
+<li><p><strong>Apa itu Federated Learning (FL)?</strong> 🤔
+Bayangkan kita mau melatih model AI (misalnya, untuk kenal jenis bunga dari foto) pakai data dari banyak <em>handphone</em> pengguna. Tapi, kita <em>gak mau</em> data pribadi pengguna (foto-foto mereka) dikirim ke server pusat karena masalah privasi. Nah, FL ini solusinya! Caranya:</p>
+<ol class="arabic simple">
+<li><p>Server pusat kirim model AI awal ke <em>handphone</em> pengguna (disebut <strong>klien</strong>).</p></li>
+<li><p>Setiap <em>handphone</em> melatih model itu pakai data lokalnya sendiri.</p></li>
+<li><p><em>Handphone</em> <em>gak</em> kirim data mentah, tapi cuma kirim &quot;pembaruan&quot; atau &quot;pelajaran&quot; (gradien/perubahan bobot model) yang didapat dari data lokalnya ke server.</p></li>
+<li><p>Server pusat menggabungkan semua &quot;pelajaran&quot; dari banyak <em>handphone</em> untuk memperbarui model utama. Proses ini diulang-ulang. Algoritma umum untuk ini namanya <strong>Federated Averaging (FedAvg)</strong>.</p></li>
+</ol>
+</li>
+<li><p><strong>Masalahnya di mana?</strong> 😥
+Kalau kita latih AI di pusat data, kita bisa atur datanya biar <strong>IID (Independent and Identically Distributed)</strong>, artinya data di setiap <em>batch</em> (kelompok data kecil untuk sekali latihan) itu mirip-mirip distribusinya (misalnya, jumlah gambar tiap kelas bunga seimbang). Tapi di FL, data di tiap <em>handphone</em> pengguna itu <strong>sangat mungkin BEDA-BEDA</strong> atau <strong>Non-IID</strong>. Contohnya:</p>
+<ul>
+<li><p>Pengguna A suka foto mawar, jadi datanya kebanyakan mawar.</p></li>
+<li><p>Pengguna B tinggal di daerah tropis, fotonya banyak anggrek.</p></li>
+<li><p>Pengguna C cuma punya sedikit foto bunga.
+Distribusi data yang <em>gak identik</em> antar klien ini bisa bikin proses belajar AI jadi kacau dan performanya jelek.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="tujuan-penelitian-ini-ngukur-efek-cari-solusi">
+<h2><strong>Tujuan Penelitian Ini: Ngukur Efek &amp; Cari Solusi</strong><a class="headerlink" href="#tujuan-penelitian-ini-ngukur-efek-cari-solusi" title="Link to this heading">¶</a></h2>
+<p>Penelitian ini punya dua tujuan utama:</p>
+<ol class="arabic simple">
+<li><p><strong>Mengukur seberapa parah sih efek data Non-IID ini?</strong> Mereka ingin tahu seberapa jauh penurunan performa model klasifikasi gambar kalau data antar klien semakin berbeda.</p></li>
+<li><p><strong>Mencari cara untuk mengurangi efek negatifnya.</strong> Mereka mengusulkan dan menguji sebuah strategi untuk bikin FedAvg lebih tahan banting terhadap data Non-IID.</p></li>
+</ol>
+</section>
+<hr class="docutils" />
+<section id="mensimulasikan-data-beda-beda-pakai-apa-distribusi-dirichlet">
+<h2><strong>Mensimulasikan Data Beda-beda Pakai Apa? Distribusi Dirichlet!</strong><a class="headerlink" href="#mensimulasikan-data-beda-beda-pakai-apa-distribusi-dirichlet" title="Link to this heading">¶</a></h2>
+<p>Untuk bisa mengukur efek data Non-IID secara sistematis, peneliti <em>gak</em> bisa langsung pakai data asli pengguna (karena privasi tadi). Jadi, mereka bikin simulasi data Non-IID pakai dataset gambar standar, yaitu <strong>CIFAR-10</strong> (dataset berisi 60.000 gambar kecil dalam 10 kelas, seperti pesawat, mobil, burung, dll.).</p>
+<p>Mereka membagi data CIFAR-10 ini ke 100 klien simulasi, masing-masing dapat 500 gambar. Nah, cara baginya ini yang penting, biar bisa dikontrol tingkat &quot;beda-beda&quot;-nya (non-identicalness):</p>
+<ul class="simple">
+<li><p><strong>Pakai Distribusi Dirichlet:</strong> Bayangkan kita punya 10 kantong (mewakili 10 kelas gambar di CIFAR-10). Distribusi Dirichlet ini kayak cara &quot;acak&quot; untuk menentukan proporsi kelereng dari tiap kantong yang akan dimasukkan ke setiap tas klien.</p>
+<ul>
+<li><p>Setiap klien <code class="docutils literal notranslate"><span class="pre">k</span></code> akan punya vektor proporsi kelas <code class="docutils literal notranslate"><span class="pre">qk</span></code> (misalnya, klien 1 punya 70% gambar kucing, 20% anjing, 10% mobil, dst.). Total proporsi harus 1 (atau 100%).</p></li>
+<li><p>Proporsi <code class="docutils literal notranslate"><span class="pre">qk</span></code> ini diambil (di-<em>sample</em>) dari <strong>Distribusi Dirichlet</strong>, ditulis <span class="math notranslate nohighlight">\(q \sim Dir(\alpha p)\)</span>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">p</span></code> itu <strong>distribusi prior</strong>, anggapan awal kita tentang sebaran kelas. Di sini, mereka pakai <code class="docutils literal notranslate"><span class="pre">p</span></code> yang <strong>seragam</strong> (uniform), artinya awalnya dianggap setiap kelas punya kemungkinan sama rata (10% untuk masing-masing dari 10 kelas). Ini penting karena data ujinya juga distribusinya seragam.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">α</span></code> (alpha) itu <strong>parameter konsentrasi</strong>. Ini yang jadi &quot;tombol&quot; pengatur tingkat keidentikan data antar klien.</p>
+<ul>
+<li><p>Kalau <code class="docutils literal notranslate"><span class="pre">α</span></code> <strong>besar banget</strong> (mendekati tak hingga, <span class="math notranslate nohighlight">\(\alpha \rightarrow \infty\)</span>), semua klien akan punya distribusi kelas yang <strong>mirip banget</strong> dengan <code class="docutils literal notranslate"><span class="pre">p</span></code> (jadi hampir IID). Kayak kita kasih instruksi super ketat pas bagi kelereng.</p></li>
+<li><p>Kalau <code class="docutils literal notranslate"><span class="pre">α</span></code> <strong>kecil banget</strong> (mendekati nol, <span class="math notranslate nohighlight">\(\alpha \rightarrow 0\)</span>), setiap klien kemungkinan besar <strong>hanya akan punya data dari SATU kelas saja</strong> yang dipilih acak. Ini kondisi Non-IID paling ekstrem. Kayak kita bagi kelerengnya asal banget, satu tas bisa cuma isi kelereng merah semua.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p><strong>Spektrum Keidentikan:</strong> Dengan mengubah-ubah nilai <code class="docutils literal notranslate"><span class="pre">α</span></code>, peneliti bisa menciptakan berbagai skenario, dari data yang hampir sama semua antar klien sampai data yang sangat berbeda drastis. Mereka mencoba 8 nilai <code class="docutils literal notranslate"><span class="pre">α</span></code> yang berbeda.</p></li>
+</ul>
+<p><strong>(Lihat Gambar 1 di jurnal):</strong> Gambar ini visualisasi bagus banget. Kolom (a) itu cara lama (urut-dan-partisi), tiap klien cuma dapat 2 kelas. Kolom (b) sampai (e) pakai Dirichlet dengan <code class="docutils literal notranslate"><span class="pre">α</span></code> dari besar ke kecil. Kelihatan jelas kan, makin kecil <code class="docutils literal notranslate"><span class="pre">α</span></code> (ke arah kanan), warna di tiap baris (klien) makin homogen (cuma satu atau sedikit warna), artinya datanya makin Non-IID.</p>
+</section>
+<hr class="docutils" />
+<section id="eksperimen-pertama-seberapa-parah-sih-kalau-pakai-fedavg-biasa">
+<h2><strong>Eksperimen Pertama: Seberapa Parah Sih Kalau Pakai FedAvg Biasa?</strong><a class="headerlink" href="#eksperimen-pertama-seberapa-parah-sih-kalau-pakai-fedavg-biasa" title="Link to this heading">¶</a></h2>
+<p>Peneliti lalu melatih model <strong>Convolutional Neural Network (CNN)</strong> standar (arsitektur mirip yang dipakai McMahan et al., 2017) pakai FedAvg biasa di atas data simulasi tadi.</p>
+<ul class="simple">
+<li><p><strong>Pengaturan Latihan (Hyperparameter):</strong></p>
+<ul>
+<li><p><strong>Batch Size (B):</strong> Ukuran kelompok data kecil yang dipakai klien untuk sekali update SGD di <em>handphone</em>-nya. Di sini <span class="math notranslate nohighlight">\(B=64\)</span>.</p></li>
+<li><p><strong>Local Epochs (E):</strong> Berapa kali klien melatih model pakai <em>seluruh</em> data lokalnya sebelum kirim pembaruan ke server. Mereka coba <span class="math notranslate nohighlight">\(E=1\)</span> (latih sebentar) dan <span class="math notranslate nohighlight">\(E=5\)</span> (latih lebih lama).</p></li>
+<li><p><strong>Reporting Fraction (C):</strong> Berapa persen klien yang ikut serta di setiap putaran komunikasi. Misal <span class="math notranslate nohighlight">\(C=0.1\)</span> artinya dari 100 klien, cuma 10 yang dipilih acak untuk berkontribusi di putaran itu. Mereka coba <span class="math notranslate nohighlight">\(C=0.05, 0.1, 0.2, 0.4\)</span>.</p></li>
+<li><p><strong>Client Learning Rate (η):</strong> Seberapa besar &quot;langkah&quot; pembaruan yang dilakukan klien saat SGD. Ini dicari nilai terbaiknya dari beberapa pilihan.</p></li>
+<li><p><strong>Weight Decay:</strong> Teknik regulariasi untuk mencegah model jadi terlalu kompleks (overfitting) dengan memberi &quot;hukuman&quot; kecil pada bobot model yang besar. Nilainya 0.004. Learning rate <em>tidak</em> diturunkan selama pelatihan.</p></li>
+<li><p>Total <strong>10.000 putaran komunikasi</strong>.</p></li>
+</ul>
+</li>
+<li><p><strong>Hasilnya Gimana? (Lihat Gambar 2, 3, 4)</strong></p>
+<ul>
+<li><p><strong>Makin Non-IID (α kecil), Makin Jelek:</strong> Akurasi model di data uji (data yang <em>gak pernah</em> dilihat pas latihan) <strong>turun drastis</strong> saat <code class="docutils literal notranslate"><span class="pre">α</span></code> makin kecil, terutama saat mendekati 0. Artinya, FedAvg biasa kesulitan belajar kalau data klien beda-beda banget.</p></li>
+<li><p><strong>Nambah Klien (C besar) Gak Selalu Efektif:</strong> Menaikkan jumlah klien yang ikut (menaikkan C) memang sedikit membantu, tapi efeknya makin kecil, apalagi kalau datanya udah lumayan identik (α besar).</p></li>
+<li><p><strong>Lama Latih di Klien (E) Gak Nentu:</strong> Anehnya, melatih lebih lama di klien (<span class="math notranslate nohighlight">\(E=5\)</span>) <em>gak selalu</em> lebih baik daripada latih sebentar (<span class="math notranslate nohighlight">\(E=1\)</span>) saat datanya Non-IID, padahal intuisinya mungkin sebaliknya.</p></li>
+<li><p><strong>Latihan Jadi Gak Stabil:</strong> Kalau data makin Non-IID (α kecil) dan klien yang ikut sedikit (C kecil), kurva belajarnya jadi <strong>naik-turun gak jelas (volatile)</strong> dan <strong>susah konvergen</strong> (susah mencapai performa terbaiknya) bahkan setelah 10.000 putaran. (Lihat Gambar 3, kurva hijau dan abu-abu putus-putus).</p></li>
+<li><p><strong>Sensitif Sama Learning Rate:</strong> Kalau datanya identik (α besar), model bisa tetap bagus meskipun learning rate (η) diubah-ubah dalam rentang yang lumayan lebar (sekitar 2 orde <strong>magnitudo</strong> - artinya faktor 100x). Tapi kalau datanya Non-IID (α kecil) dan klien yang ikut sedikit (C kecil), kita harus <strong>hati-hati banget</strong> pilih learning rate yang pas. Salah sedikit, performanya bisa anjlok. (Lihat Gambar 4, kurva untuk α=0.00 bentuknya lebih &quot;tajam&quot;).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="solusinya-tambahin-momentum-di-server-fedavgm">
+<h2><strong>Solusinya: Tambahin &quot;Momentum&quot; di Server (FedAvgM)</strong><a class="headerlink" href="#solusinya-tambahin-momentum-di-server-fedavgm" title="Link to this heading">¶</a></h2>
+<p>Karena FedAvg biasa kewalahan, peneliti coba modifikasi: <strong>Federated Averaging with Server Momentum (FedAvgM)</strong>.</p>
+<ul class="simple">
+<li><p><strong>Apa itu Momentum?</strong> 🏃💨
+Momentum di optimasi itu mirip konsep momentum di fisika. Kalau kita dorong bola, dia gak langsung berhenti kan? Dia punya &quot;momentum&quot; yang bikin dia terus gerak. Dalam SGD, momentum membantu &quot;mengingat&quot; arah pembaruan sebelumnya.</p>
+<ul>
+<li><p><strong>Manfaatnya:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Mempercepat konvergensi:</strong> Bisa bantu model belajar lebih cepat.</p></li>
+<li><p><strong>Meredam Osilasi:</strong> Kalau pembaruan dari klien arahnya gonta-ganti terus (karena data mereka beda-beda), momentum bisa bantu &quot;meratakan&quot; arahnya biar lebih stabil. Ini <em>cocok banget</em> buat kasus data Non-IID di FL!</p></li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p><strong>Gimana Cara Kerjanya di FedAvgM?</strong></p>
+<ul>
+<li><p>FedAvg Biasa: Server langsung update model <code class="docutils literal notranslate"><span class="pre">w</span></code> pakai rata-rata pembaruan klien <span class="math notranslate nohighlight">\(\Delta w\)</span>: <span class="math notranslate nohighlight">\(w \leftarrow w - \Delta w\)</span>.</p></li>
+<li><p>FedAvgM: Server punya &quot;variabel kecepatan&quot; <code class="docutils literal notranslate"><span class="pre">v</span></code>. Setiap putaran:</p>
+<ol class="arabic simple">
+<li><p>Hitung rata-rata pembaruan klien <span class="math notranslate nohighlight">\(\Delta w\)</span> (sama kayak FedAvg).</p></li>
+<li><p>Update &quot;kecepatan&quot;: <span class="math notranslate nohighlight">\(v \leftarrow \beta v + \Delta w\)</span>. Di sini <code class="docutils literal notranslate"><span class="pre">β</span></code> (beta) itu <strong>faktor momentum</strong> (biasanya antara 0 dan 1, seringnya dekat 1 kayak 0.9). Ini artinya kecepatan baru adalah sebagian kecil dari kecepatan lama (<code class="docutils literal notranslate"><span class="pre">βv</span></code>) ditambah pembaruan sekarang (<span class="math notranslate nohighlight">\(\Delta w\)</span>). Jadi dia &quot;ingat&quot; arah sebelumnya.</p></li>
+<li><p>Update model pakai &quot;kecepatan&quot;: <span class="math notranslate nohighlight">\(w \leftarrow w - v\)</span>.</p></li>
+</ol>
+</li>
+<li><p>Mereka pakai varian momentum namanya <strong>Nesterov Accelerated Gradient (NAG)</strong>, yang sedikit lebih canggih tapi intinya sama. Mereka coba berbagai nilai <code class="docutils literal notranslate"><span class="pre">β</span></code>. Learning rate <em>server</em> (bukan klien) dijaga tetap 1.0.</p></li>
+</ul>
+</li>
+<li><p><strong>Hasilnya Gimana? (Lihat Gambar 5)</strong></p>
+<ul>
+<li><p><strong>Jauh Lebih Baik!</strong> 🎉 FedAvgM secara konsisten <strong>mengalahkan</strong> FedAvg biasa di hampir semua skenario data Non-IID (berbagai nilai α).</p></li>
+<li><p><strong>Lebih Tahan Banting:</strong> Performanya <em>gak</em> turun drastis meskipun data sangat Non-IID (α kecil). Contohnya, saat <span class="math notranslate nohighlight">\(E=1, C=0.05\)</span> (kondisi lumayan sulit), FedAvgM tetap bisa capai akurasi di atas 75%, sementara FedAvg anjlok ke sekitar 35%. Keren kan!</p></li>
+<li><p><strong>Mendekati Terpusat:</strong> Di banyak kasus, akurasi FedAvgM bahkan mendekati hasil kalau model dilatih secara terpusat (data dikumpulin semua, akurasi sekitar 86%).</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="tapi-nyetel-fedavgm-agak-ribet-peran-learning-rate-efektif">
+<h2><strong>Tapi... Nyetel FedAvgM Agak Ribet: Peran Learning Rate Efektif</strong><a class="headerlink" href="#tapi-nyetel-fedavgm-agak-ribet-peran-learning-rate-efektif" title="Link to this heading">¶</a></h2>
+<p>Meskipun hasilnya bagus, FedAvgM punya satu PR lagi: nambahin parameter <code class="docutils literal notranslate"><span class="pre">β</span></code> bikin nyari kombinasi hiperparameter terbaik jadi lebih susah.</p>
+<ul class="simple">
+<li><p><strong>Learning Rate Efektif (η&lt;sub&gt;eff&lt;/sub&gt;):</strong> Peneliti pakai konsep <strong>learning rate efektif</strong>, <span class="math notranslate nohighlight">\(\eta_{eff} = \eta / (1 - \beta)\)</span>. Kenapa? Ini kayak gabungan efek learning rate klien (η) dan momentum server (β) jadi satu angka. Teori dan eksperimen [Shallue et al., 2018] nunjukin kalau seringkali ada nilai <span class="math notranslate nohighlight">\(\eta_{eff}\)</span> &quot;optimal&quot; untuk suatu masalah, meskipun kombinasi η dan β nya bisa beda-beda.</p></li>
+<li><p><strong>Hubungan Antar Parameter (Lihat Gambar 6):</strong></p>
+<ul>
+<li><p><strong>Kalau Klien Banyak (C besar):</strong> Lebih gampang nyari η dan β yang pas. Ada rentang <span class="math notranslate nohighlight">\(\eta_{eff}\)</span> yang lumayan lebar (sekitar 2 orde magnitudo) yang bisa kasih hasil bagus.</p></li>
+<li><p><strong>Kalau Klien Sedikit (C kecil):</strong> Lebih susah! Rentang <span class="math notranslate nohighlight">\(\eta_{eff}\)</span> yang bagus jadi <strong>sempit banget</strong> (cuma sekitar 1 orde magnitudo). Kita harus pakai learning rate klien (η) yang <strong>kecil</strong> <em>dan</em> momentum (β) yang <strong>tinggi</strong> (dekat 1) biar pembaruan dari sedikit klien yang datanya mungkin aneh itu <em>gak</em> langsung merusak model global, tapi pelan-pelan diakumulasi lewat momentum.</p></li>
+<li><p><strong>Kalau Latih Lama di Klien (E besar):</strong> Karena klien ngelakuin optimasi lebih banyak secara lokal, pembaruan (<span class="math notranslate nohighlight">\(\Delta w_k\)</span>) yang mereka kirim bisa jadi lebih &quot;beragam&quot; atau punya varians lebih tinggi. Untuk menstabilkan ini, biasanya butuh <span class="math notranslate nohighlight">\(\eta_{eff}\)</span> yang <strong>lebih rendah</strong>.</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>(Lihat Gambar 6):</strong> Gambar ini nunjukkin akurasi vs <span class="math notranslate nohighlight">\(\eta_{eff}\)</span>. Ukuran titik nunjukkin nilai η absolut, warnanya beda-beda. Kelihatan kan polanya? Ada &quot;puncak&quot; performa di sekitar <span class="math notranslate nohighlight">\(\eta_{eff}\)</span> tertentu. Kalau C kecil (gambar c, d), puncaknya lebih sempit dan titik-titik terbaik cenderung punya ukuran kecil (η kecil) dan warna terang (β tinggi mendekati 1).</p>
+</section>
+<hr class="docutils" />
+<section id="kesimpulan-singkat">
+<h2><strong>Kesimpulan Singkat</strong><a class="headerlink" href="#kesimpulan-singkat" title="Link to this heading">¶</a></h2>
+<p>Jadi, intinya jurnal ini nunjukkin:</p>
+<ol class="arabic simple">
+<li><p><strong>Data Non-IID itu masalah serius</strong> di Federated Learning, bisa bikin performa model anjlok dan latihannya gak stabil, apalagi kalau cuma sedikit klien yang aktif per putaran.</p></li>
+<li><p><strong>Mensimulasikan Non-IID pakai Distribusi Dirichlet dengan parameter α</strong> itu cara yang bagus untuk mempelajari efek ini secara sistematis.</p></li>
+<li><p><strong>Menambahkan Momentum di Server (FedAvgM)</strong> adalah solusi yang efektif banget untuk melawan efek negatif data Non-IID, bikin performa lebih stabil dan jauh lebih baik, bahkan mendekati performa latihan terpusat. 💪</p></li>
+<li><p>Tapi, <strong>penyetelan hiperparameter</strong> (khususnya learning rate dan momentum) jadi lebih krusial di FedAvgM, terutama kalau jumlah klien yang berpartisipasi sedikit. Konsep <em>learning rate efektif</em> bisa membantu proses ini.</p></li>
+</ol>
+</section>
+<section id="penjelasan-2">
+<h2>PENJELASAN 2:<a class="headerlink" href="#penjelasan-2" title="Link to this heading">¶</a></h2>
+</section>
+<section id="bagaimana-klien-belajar-sgd-jawabannya">
+<h2><strong>Bagaimana Klien Belajar? SGD Jawabannya</strong><a class="headerlink" href="#bagaimana-klien-belajar-sgd-jawabannya" title="Link to this heading">¶</a></h2>
+<p>Sebelum ke rumus server, kita pahami dulu apa yang terjadi di <em>handphone</em> klien. Setiap klien yang terpilih di satu putaran akan melatih model yang diterima dari server pakai data lokalnya. Proses latihan ini biasanya pakai <strong>Stochastic Gradient Descent (SGD)</strong> atau variannya.</p>
+<ul class="simple">
+<li><p><strong>SGD itu apa?</strong> 🧐
+SGD itu cara umum untuk melatih model AI. Bayangkan model AI itu kayak orang buta yang lagi di gunung (permukaan <em>error</em>) dan mau cari jalan turun ke lembah (titik <em>error</em> terendah).</p>
+<ol class="arabic simple">
+<li><p>Dia ambil <em>satu langkah kecil</em> (ini diatur sama <strong>learning rate</strong>, η).</p></li>
+<li><p>Arah langkahnya ditentukan oleh <em>kemiringan</em> (gradien) di tempat dia berdiri sekarang, tapi dihitung hanya dari <em>sebagian kecil data</em> (<strong>stochastic</strong> / acak, yaitu <strong>batch</strong> data). Dia melangkah ke arah <em>turunan paling curam</em>.</p></li>
+<li><p>Dia ulang terus langkah ini sampai nemu lembah (atau cukup dekat).
+Di FL, setiap klien melakukan SGD ini beberapa kali (sebanyak <strong>Local Epochs</strong>, E) pakai data lokalnya. Hasil akhirnya adalah &quot;arah&quot; atau &quot;pembaruan&quot; (disebut <strong>gradien</strong> atau <strong>perubahan bobot</strong>, <span class="math notranslate nohighlight">\(\Delta w_k\)</span>) yang menurut klien tersebut paling bagus untuk menurunkan <em>error</em> berdasarkan data lokalnya.</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="rumus-update-server-fedavg-yang-biasa">
+<h2><strong>Rumus Update Server FedAvg (Yang Biasa)</strong><a class="headerlink" href="#rumus-update-server-fedavg-yang-biasa" title="Link to this heading">¶</a></h2>
+<p>Di akhir latihan lokal, klien terpilih akan kirim pembaruan bobot (<span class="math notranslate nohighlight">\(\Delta w_k\)</span>) ke server. Server lalu menggabungkan semua pembaruan ini untuk update model global <code class="docutils literal notranslate"><span class="pre">w</span></code>. Rumusnya begini:</p>
+<p><span class="math notranslate nohighlight">\(\Delta w = \sum_{k=1}^{K} \frac{n_k}{n} \Delta w_k\)</span></p>
+<ul class="simple">
+<li><p><strong>Apa artinya?</strong> 🤔</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">w</span></code>: Bobot model AI global saat ini (misalnya, angka-angka parameter di dalam model CNN).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">K</span></code>: Jumlah klien yang berpartisipasi di putaran ini (misalnya, 10 klien).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">k</span></code>: Indeks untuk klien ke-k (dari 1 sampai K).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta w_k\)</span>: Pembaruan bobot yang dihitung dan dikirim oleh klien ke-k. Ini adalah hasil SGD lokal di <em>handphone</em> klien k.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n_k\)</span>: Jumlah data (contoh gambar) yang dimiliki klien ke-k yang dipakai untuk latihan.</p></li>
+<li><p><span class="math notranslate nohighlight">\(n\)</span>: Total jumlah data dari <em>semua</em> klien yang berpartisipasi di putaran itu (<span class="math notranslate nohighlight">\(n = \sum_{k=1}^{K} n_k\)</span>).</p></li>
+<li><p><span class="math notranslate nohighlight">\(\frac{n_k}{n}\)</span>: Ini adalah <strong>bobot rata-rata</strong> (weighted average). Artinya, pembaruan dari klien yang punya data lebih banyak (<span class="math notranslate nohighlight">\(n_k\)</span> besar) akan punya pengaruh <strong>lebih besar</strong> dalam menentukan pembaruan global <span class="math notranslate nohighlight">\(\Delta w\)</span>. Masuk akal kan? Klien yang &quot;belajar&quot; dari lebih banyak data, pendapatnya lebih didengar.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\sum_{k=1}^{K}\)</span>: Simbol sigma ini artinya &quot;jumlahkan semua&quot; dari klien k=1 sampai K.</p></li>
+<li><p><span class="math notranslate nohighlight">\(\Delta w\)</span>: Ini adalah hasil <strong>rata-rata terbobot</strong> dari semua pembaruan klien. Inilah &quot;pembaruan global&quot; yang akan dipakai server.</p></li>
+</ul>
+</li>
+</ul>
+<p>Setelah <span class="math notranslate nohighlight">\(\Delta w\)</span> dihitung, server update model globalnya:</p>
+<p><span class="math notranslate nohighlight">\(w \leftarrow w - \Delta w\)</span></p>
+<ul class="simple">
+<li><p><strong>Apa artinya?</strong> 🤔</p>
+<ul>
+<li><p>Tanda panah (<span class="math notranslate nohighlight">\(\leftarrow\)</span>) artinya &quot;diperbarui menjadi&quot;.</p></li>
+<li><p>Bobot model global yang baru (<code class="docutils literal notranslate"><span class="pre">w</span></code> baru) adalah bobot lama (<code class="docutils literal notranslate"><span class="pre">w</span></code> lama) <strong>dikurangi</strong> pembaruan global (<span class="math notranslate nohighlight">\(\Delta w\)</span>). Kenapa dikurangi? Karena SGD (dan <span class="math notranslate nohighlight">\(\Delta w_k\)</span>) biasanya menghitung arah <em>kenaikan</em> error, jadi kita bergerak ke arah <em>sebaliknya</em> untuk <em>menurunkan</em> error.</p></li>
+</ul>
+</li>
+<li><p><strong>Contoh Sederhana FedAvg:</strong>
+Anggap model kita cuma punya 1 bobot <code class="docutils literal notranslate"><span class="pre">w</span></code>, dan nilainya sekarang <code class="docutils literal notranslate"><span class="pre">w</span> <span class="pre">=</span> <span class="pre">10</span></code>. Ada 2 klien ikut putaran ini:</p>
+<ul>
+<li><p>Klien 1 punya data <span class="math notranslate nohighlight">\(n_1 = 60\)</span>, hasil latihannya <span class="math notranslate nohighlight">\(\Delta w_1 = +0.5\)</span> (menurut klien 1, bobot perlu ditambah 0.5).</p></li>
+<li><p>Klien 2 punya data <span class="math notranslate nohighlight">\(n_2 = 40\)</span>, hasil latihannya <span class="math notranslate nohighlight">\(\Delta w_2 = -0.1\)</span> (menurut klien 2, bobot perlu dikurangi 0.1).
+Total data <span class="math notranslate nohighlight">\(n = n_1 + n_2 = 60 + 40 = 100\)</span>.
+Hitung pembaruan global <span class="math notranslate nohighlight">\(\Delta w\)</span>:
+<span class="math notranslate nohighlight">\(\Delta w = \frac{n_1}{n} \Delta w_1 + \frac{n_2}{n} \Delta w_2 = \frac{60}{100}(+0.5) + \frac{40}{100}(-0.1)\)</span>
+<span class="math notranslate nohighlight">\(\Delta w = (0.6)(0.5) + (0.4)(-0.1) = 0.3 - 0.04 = +0.26\)</span>
+Server update model global:
+<span class="math notranslate nohighlight">\(w \leftarrow w - \Delta w = 10 - (+0.26) = 9.74\)</span>
+Jadi, bobot model global baru adalah 9.74.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="rumus-update-server-fedavgm-dengan-momentum">
+<h2><strong>Rumus Update Server FedAvgM (Dengan Momentum)</strong><a class="headerlink" href="#rumus-update-server-fedavgm-dengan-momentum" title="Link to this heading">¶</a></h2>
+<p>FedAvgM menambahkan konsep &quot;momentum&quot; di sisi server untuk membuat update lebih stabil, terutama saat data klien Non-IID.</p>
+<p>Rumusnya jadi dua langkah:</p>
+<ol class="arabic simple">
+<li><p><strong>Update &quot;Kecepatan&quot; (Velocity):</strong>
+<span class="math notranslate nohighlight">\(v \leftarrow \beta v + \Delta w\)</span></p></li>
+<li><p><strong>Update Bobot Model:</strong>
+<span class="math notranslate nohighlight">\(w \leftarrow w - v\)</span></p></li>
+</ol>
+<ul>
+<li><p><strong>Apa artinya?</strong> 🤔</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">v</span></code>: Ini variabel baru di server, namanya <strong>velocity</strong> atau &quot;kecepatan pembaruan&quot;. Dia menyimpan semacam &quot;rata-rata bergerak&quot; (moving average) dari pembaruan-pembaruan sebelumnya. Awalnya, <code class="docutils literal notranslate"><span class="pre">v</span></code> biasanya 0.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">β</span></code> (beta): Ini <strong>faktor momentum</strong>. Nilainya antara 0 dan 1.</p>
+<ul>
+<li><p>Kalau <span class="math notranslate nohighlight">\(\beta = 0\)</span>, rumusnya jadi <span class="math notranslate nohighlight">\(v \leftarrow 0 \cdot v + \Delta w = \Delta w\)</span>, dan <span class="math notranslate nohighlight">\(w \leftarrow w - v = w - \Delta w\)</span>. Ini <strong>sama persis</strong> kayak FedAvg biasa! Jadi FedAvg itu kasus spesial FedAvgM dengan <span class="math notranslate nohighlight">\(\beta=0\)</span>.</p></li>
+<li><p>Kalau <span class="math notranslate nohighlight">\(\beta\)</span> dekat 1 (misal 0.9), artinya <code class="docutils literal notranslate"><span class="pre">v</span></code> baru akan <strong>sangat dipengaruhi</strong> oleh <code class="docutils literal notranslate"><span class="pre">v</span></code> lama (<span class="math notranslate nohighlight">\(\beta v\)</span> jadi besar) dan <strong>sedikit dipengaruhi</strong> oleh <span class="math notranslate nohighlight">\(\Delta w\)</span> sekarang. Ini bikin update <code class="docutils literal notranslate"><span class="pre">w</span></code> jadi lebih <em>smooth</em>, gak gampang goyang hanya karena <span class="math notranslate nohighlight">\(\Delta w\)</span> di satu putaran kebetulan aneh. Dia &quot;ingat&quot; arah update sebelumnya.</p></li>
+</ul>
+</li>
+<li><p><span class="math notranslate nohighlight">\(\Delta w\)</span>: Ini <strong>sama persis</strong> kayak <span class="math notranslate nohighlight">\(\Delta w\)</span> di FedAvg biasa (rata-rata terbobot pembaruan klien).</p></li>
+<li><p><strong>Langkah 1:</strong> Kecepatan baru <code class="docutils literal notranslate"><span class="pre">v</span></code> adalah kombinasi dari kecepatan lama (dikalikan faktor <code class="docutils literal notranslate"><span class="pre">β</span></code>) ditambah pembaruan rata-rata klien saat ini (<span class="math notranslate nohighlight">\(\Delta w\)</span>).</p></li>
+<li><p><strong>Langkah 2:</strong> Bobot model <code class="docutils literal notranslate"><span class="pre">w</span></code> diperbarui dengan <em>mengurangi</em> kecepatan <code class="docutils literal notranslate"><span class="pre">v</span></code>, bukan <span class="math notranslate nohighlight">\(\Delta w\)</span> langsung.</p></li>
+</ul>
+</li>
+<li><p><strong>Nesterov Accelerated Gradient (NAG):</strong> Jurnal ini menyebutkan pakai varian NAG. NAG itu sedikit lebih pintar dari momentum standar. Intinya, sebelum menghitung gradien (<span class="math notranslate nohighlight">\(\Delta w\)</span>), dia &quot;intip&quot; dulu sedikit ke arah momentum (<code class="docutils literal notranslate"><span class="pre">v</span></code>) akan membawa bobot, baru hitung gradien di titik &quot;intipan&quot; itu. Ini seringkali bantu konvergen lebih cepat. Tapi konsep dasarnya tetap pakai akumulasi momentum <code class="docutils literal notranslate"><span class="pre">v</span></code>.</p></li>
+<li><p><strong>Contoh Sederhana FedAvgM:</strong>
+Pakai skenario yang sama: <code class="docutils literal notranslate"><span class="pre">w</span> <span class="pre">=</span> <span class="pre">10</span></code>. Klien 1 (<span class="math notranslate nohighlight">\(\Delta w_1 = +0.5, n_1=60\)</span>), Klien 2 (<span class="math notranslate nohighlight">\(\Delta w_2 = -0.1, n_2=40\)</span>). Jadi <span class="math notranslate nohighlight">\(\Delta w = +0.26\)</span>.
+Misalkan ini putaran pertama, jadi <code class="docutils literal notranslate"><span class="pre">v</span></code> lama = 0. Kita pakai momentum <span class="math notranslate nohighlight">\(\beta = 0.9\)</span>.</p>
+<ol class="arabic simple">
+<li><p>Update kecepatan <code class="docutils literal notranslate"><span class="pre">v</span></code>:
+<span class="math notranslate nohighlight">\(v \leftarrow \beta v + \Delta w = (0.9)(0) + (+0.26) = +0.26\)</span></p></li>
+<li><p>Update bobot <code class="docutils literal notranslate"><span class="pre">w</span></code>:
+<span class="math notranslate nohighlight">\(w \leftarrow w - v = 10 - (+0.26) = 9.74\)</span>
+Di putaran pertama, hasilnya sama kayak FedAvg.</p></li>
+</ol>
+<p>Sekarang, <strong>putaran kedua</strong>. Anggap bobot <em>baru</em> jadi <code class="docutils literal notranslate"><span class="pre">w</span> <span class="pre">=</span> <span class="pre">9.74</span></code>.
+Misal di putaran ini, klien yang terpilih (mungkin beda, mungkin sama) menghasilkan rata-rata pembaruan baru <span class="math notranslate nohighlight">\(\Delta w_{\text{baru}} = -0.5\)</span> (arahnya beda jauh!). Kecepatan <em>lama</em> dari putaran sebelumnya adalah <code class="docutils literal notranslate"><span class="pre">v</span> <span class="pre">=</span> <span class="pre">+0.26</span></code>.</p>
+<ul class="simple">
+<li><p><strong>Kalau pakai FedAvg biasa:</strong>
+<span class="math notranslate nohighlight">\(w \leftarrow w - \Delta w_{\text{baru}} = 9.74 - (-0.5) = 10.24\)</span> (Bobotnya langsung &quot;loncat&quot; balik arah).</p></li>
+<li><p><strong>Kalau pakai FedAvgM (lanjutan):</strong></p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Update kecepatan <code class="docutils literal notranslate"><span class="pre">v</span></code>:
+<span class="math notranslate nohighlight">\(v \leftarrow \beta v + \Delta w_{\text{baru}} = (0.9)(+0.26) + (-0.5)\)</span>
+<span class="math notranslate nohighlight">\(v = 0.234 - 0.5 = -0.266\)</span></p></li>
+<li><p>Update bobot <code class="docutils literal notranslate"><span class="pre">w</span></code>:
+<span class="math notranslate nohighlight">\(w \leftarrow w - v = 9.74 - (-0.266) = 9.74 + 0.266 = 10.006\)</span>
+Lihat bedanya! Dengan momentum, meskipun pembaruan klien sekarang (<span class="math notranslate nohighlight">\(\Delta w_{\text{baru}}\)</span>) arahnya negatif kuat, bobot <code class="docutils literal notranslate"><span class="pre">w</span></code> <em>gak</em> langsung loncat jauh ke arah negatif. Dia masih &quot;tertarik&quot; sedikit oleh momentum positif dari putaran sebelumnya, jadi bergeraknya lebih <em>smooth</em> (dari 9.74 cuma jadi 10.006, gak langsung ke 10.24). Ini yang bantu meredam osilasi dari data Non-IID.</p></li>
+</ol>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="istilah-teknis-lainnya">
+<h2><strong>Istilah Teknis Lainnya</strong><a class="headerlink" href="#istilah-teknis-lainnya" title="Link to this heading">¶</a></h2>
+<ul class="simple">
+<li><p><strong>Weight Decay:</strong> Seperti disebut sebelumnya, ini teknik <strong>regularisasi</strong>. Tujuannya mencegah <strong>overfitting</strong> (model terlalu hafal data latihan sampai gak bisa generalisasi ke data baru). Caranya, saat update bobot, kita tambahkan &quot;hukuman&quot; kecil sebanding dengan besarnya bobot itu sendiri. Jadi, model &quot;didorong&quot; untuk pakai bobot yang nilainya kecil-kecil saja, biar gak terlalu kompleks. Nilai 0.004 itu menentukan seberapa kuat hukumannya.</p></li>
+<li><p><strong>Learning Rate Efektif (η&lt;sub&gt;eff&lt;/sub&gt; = η / (1 - β)):</strong> Ini cara mengukur &quot;kekuatan&quot; update total per putaran saat pakai momentum. Kalau β=0 (tanpa momentum), η&lt;sub&gt;eff&lt;/sub&gt; = η. Kalau β=0.9, η&lt;sub&gt;eff&lt;/sub&gt; = η / (1-0.9) = η / 0.1 = 10η. Artinya, dengan momentum 0.9, langkah efektifnya jadi 10x lebih besar dibanding cuma pakai learning rate η saja, karena ada akumulasi dari langkah sebelumnya. Konsep ini bantu pas nyari kombinasi η dan β yang pas.</p></li>
+<li><p><strong>Magnitude (Orde Magnitudo):</strong> Ini cara simpel bilang &quot;kelipatan 10&quot;. Kalau dibilang rentang learning rate-nya 2 orde magnitudo, artinya rentangnya sekitar 10² = 100 kali lipat (misalnya dari 0.001 sampai 0.1). Kalau rentangnya 1 orde magnitudo, ya sekitar 10 kali lipat (misal dari 0.01 sampai 0.1).</p></li>
+<li><p><strong>Fungsi Proksimal &amp; Fungsi Konveks Kuat:</strong> Istilah ini muncul di bagian &quot;Karya Terkait&quot; saat membahas <em>analisis teori konvergensi</em> algoritma FL lain.</p>
+<ul>
+<li><p><strong>Konveks Kuat (Strongly Convex):</strong> Ini properti matematis dari beberapa fungsi <em>loss</em> (fungsi yang mengukur error model). Kalau fungsi <em>loss</em>-nya konveks kuat, secara teori lebih gampang dijamin kalau SGD akan konvergen ke satu titik minimum global (lembah terdalam). Analisisnya jadi lebih mudah.</p></li>
+<li><p><strong>Fungsi Proksimal:</strong> Ini semacam &quot;tambahan&quot; yang dimasukkan ke fungsi <em>loss</em> di sisi klien. Tujuannya untuk menjaga agar model lokal klien <em>gak</em> terlalu jauh berbeda dari model global server selama latihan lokal. Ini bisa bantu konvergensi, terutama di data Non-IID.
+<strong>Penting:</strong> Jurnal ini <em>menyebut</em> karya lain yang pakai konsep ini untuk <em>membuktikan</em> konvergensi secara teori, tapi jurnal ini <em>tidak</em> pakai fungsi proksimal atau mengasumsikan konveks kuat dalam <em>eksperimen</em> FedAvg dan FedAvgM mereka. Fokus mereka lebih ke hasil empiris/eksperimental.</p></li>
+</ul>
+</li>
+</ul>
+<hr class="docutils" />
+</section>
+</section>
+
+        </article>
+      </div>
+      <footer>
+        
+        <div class="related-pages">
+          
+          
+        </div>
+        <div class="bottom-of-page">
+          <div class="left-details">
+            <div class="copyright">
+                Copyright &#169; 2025, Alfa
+            </div>
+            Made with <a href="https://www.sphinx-doc.org/">Sphinx</a> and <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+            
+            <a href="https://github.com/pradyunsg/furo">Furo</a>
+            
+          </div>
+          <div class="right-details">
+            
+          </div>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            On this page
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Translate &amp; penjelasan paper Measuring the Effects of Non-Identical Data Distribution for Federated Visual Classification</a><ul>
+<li><a class="reference internal" href="#translate">Translate</a></li>
+<li><a class="reference internal" href="#penjelasan-1">PENJELASAN 1:</a></li>
+<li><a class="reference internal" href="#apa-sih-masalah-utamanya-belajar-bareng-tapi-data-beda-beda"><strong>Apa Sih Masalah Utamanya? Belajar Bareng Tapi Data Beda-beda</strong></a></li>
+<li><a class="reference internal" href="#tujuan-penelitian-ini-ngukur-efek-cari-solusi"><strong>Tujuan Penelitian Ini: Ngukur Efek &amp; Cari Solusi</strong></a></li>
+<li><a class="reference internal" href="#mensimulasikan-data-beda-beda-pakai-apa-distribusi-dirichlet"><strong>Mensimulasikan Data Beda-beda Pakai Apa? Distribusi Dirichlet!</strong></a></li>
+<li><a class="reference internal" href="#eksperimen-pertama-seberapa-parah-sih-kalau-pakai-fedavg-biasa"><strong>Eksperimen Pertama: Seberapa Parah Sih Kalau Pakai FedAvg Biasa?</strong></a></li>
+<li><a class="reference internal" href="#solusinya-tambahin-momentum-di-server-fedavgm"><strong>Solusinya: Tambahin &quot;Momentum&quot; di Server (FedAvgM)</strong></a></li>
+<li><a class="reference internal" href="#tapi-nyetel-fedavgm-agak-ribet-peran-learning-rate-efektif"><strong>Tapi... Nyetel FedAvgM Agak Ribet: Peran Learning Rate Efektif</strong></a></li>
+<li><a class="reference internal" href="#kesimpulan-singkat"><strong>Kesimpulan Singkat</strong></a></li>
+<li><a class="reference internal" href="#penjelasan-2">PENJELASAN 2:</a></li>
+<li><a class="reference internal" href="#bagaimana-klien-belajar-sgd-jawabannya"><strong>Bagaimana Klien Belajar? SGD Jawabannya</strong></a></li>
+<li><a class="reference internal" href="#rumus-update-server-fedavg-yang-biasa"><strong>Rumus Update Server FedAvg (Yang Biasa)</strong></a></li>
+<li><a class="reference internal" href="#rumus-update-server-fedavgm-dengan-momentum"><strong>Rumus Update Server FedAvgM (Dengan Momentum)</strong></a></li>
+<li><a class="reference internal" href="#istilah-teknis-lainnya"><strong>Istilah Teknis Lainnya</strong></a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </div>
+</div><script src="_static/documentation_options.js?v=6492fc31"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
+    <script src="_static/translations.js?v=a1ed0097"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "displayMath": [["$$", "$$"], ["\\[", "\\]"]]}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    </body>
+</html>
