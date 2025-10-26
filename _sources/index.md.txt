@@ -10,3 +10,4 @@ Pilih topik di bawah ini:
 tmux
 Website_Sphinx
 otak_machine_learning
+translate & penjelasan paper Measuring the Effects of Non-Identical Data Distribution for Federated Visual Classification
